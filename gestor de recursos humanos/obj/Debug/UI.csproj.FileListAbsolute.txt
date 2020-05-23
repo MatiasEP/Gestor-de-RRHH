@@ -1,0 +1,15 @@
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\bin\Debug\gestor de recursos humanos.exe.config
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\bin\Debug\gestor de recursos humanos.exe
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\bin\Debug\gestor de recursos humanos.pdb
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\bin\Debug\BLL.dll
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\bin\Debug\DAL.dll
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\bin\Debug\BLL.pdb
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\bin\Debug\DAL.pdb
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\obj\Debug\gestor_de_recursos_humanos.Form1.resources
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\obj\Debug\gestor_de_recursos_humanos.Properties.Resources.resources
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\obj\Debug\UI.csproj.CopyComplete
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\obj\Debug\gestor de recursos humanos.exe
+C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\gestor de recursos humanos\obj\Debug\gestor de recursos humanos.pdb
