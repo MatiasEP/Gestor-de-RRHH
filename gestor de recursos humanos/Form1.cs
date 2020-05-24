@@ -22,7 +22,7 @@ namespace gestor_de_recursos_humanos
         {
             Personal personal = new Personal();
             DataTable resultado = new DataTable();
-            resultado = personal.ReportePorSP(txtLegajo.Text, txtContraseña.Text);
+            resultado = personal.ComprobarUsuario(txtLegajo.Text, txtContraseña.Text);
             DataRow row = resultado.Rows[0];
             MessageBox.Show("Nombre: " + row["Nombre"].ToString() + "\nApellido: " + row["Apellido"].ToString());
         }

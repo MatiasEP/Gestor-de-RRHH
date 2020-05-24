@@ -135,9 +135,9 @@ public class Personal : Persona {
 		}
 	}
 
-	public DataTable ReportePorSP(string legajo, string contraseña)
+	public DataTable ComprobarUsuario(string legajo, string contraseña)
 	{
-		return (new personalLogin()).ReportePorProcedure(legajo, contraseña);
+		return (new personalLogin()).ComprobarUsuario(legajo, contraseña);
 	}
 
 }//end Personal

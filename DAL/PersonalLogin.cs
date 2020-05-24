@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 public class personalLogin
 {
-    public DataTable ReportePorProcedure(string legajo, string contraseña)
+    public DataTable ComprobarUsuario(string legajo, string contraseña)
     {
         Conexion cPersonal = new Conexion();
         SqlParameter[] parametros = new SqlParameter[2];
