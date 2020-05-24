@@ -7,3 +7,12 @@ C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\BLL\obj\Debug\
 C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\BLL\obj\Debug\BLL.dll
 C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\BLL\obj\Debug\BLL.pdb
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\bin\Debug\BLL.dll
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\bin\Debug\BLL.pdb
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\bin\Debug\DAL.dll
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\bin\Debug\DAL.pdb
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\obj\Debug\BLL.dll
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\obj\Debug\BLL.pdb

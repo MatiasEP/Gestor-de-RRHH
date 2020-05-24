@@ -137,7 +137,12 @@ public class Personal : Persona {
 
 	public DataTable ComprobarUsuario(string legajo, string contraseña)
 	{
-		return (new personalLogin()).ComprobarUsuario(legajo, contraseña);
+		return (new personal()).ComprobarUsuario(legajo, contraseña);
+	}
+
+	public DataTable VerInformacionCompleta(string legajo)
+	{
+		return (new personal()).TraerInformacionCompleta(legajo);
 	}
 
 }//end Personal

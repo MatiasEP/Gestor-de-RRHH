@@ -4,3 +4,9 @@ C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\DAL\obj\Debug\
 C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\DAL\obj\Debug\DAL.dll
 C:\Users\Haskell\Documents\tecnicas de programacion\Nueva carpeta\DAL\obj\Debug\DAL.pdb
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\DAL\bin\Debug\DAL.dll
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\DAL\bin\Debug\DAL.pdb
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\DAL\obj\Debug\DAL.dll
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\DAL\obj\Debug\DAL.pdb

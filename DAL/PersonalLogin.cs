@@ -7,7 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-public class personalLogin
+public class personal
 {
     public DataTable ComprobarUsuario(string legajo, string contraseña)
     {
@@ -18,5 +18,14 @@ public class personalLogin
         parametros[0] = pUsuario;
         parametros[1] = pContraseña;
         return cPersonal.LeerPorStoreProcedure("sp_ComprobarUsuario", parametros);
+    }
+
+    public DataTable TraerInformacionCompleta( string legajo)
+    {
+        Conexion cPersonal = new Conexion();
+        SqlParameter[] parametros = new SqlParameter[1];
+        SqlParameter pUsuario = cPersonal.crearParametro("@Legajo", legajo);
+        parametros[0] = pUsuario;
+        return cPersonal.LeerPorStoreProcedure("sp_InformacionCompleta", parametros);
     }
 }

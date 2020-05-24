@@ -23,8 +23,17 @@ namespace gestor_de_recursos_humanos
             Personal personal = new Personal();
             DataTable resultado = new DataTable();
             resultado = personal.ComprobarUsuario(txtLegajo.Text, txtContraseña.Text);
-            DataRow row = resultado.Rows[0];
-            MessageBox.Show("Nombre: " + row["Nombre"].ToString() + "\nApellido: " + row["Apellido"].ToString());
+            try
+            {
+                DataRow row = resultado.Rows[0];
+                Form2 visualDatosLogeado = new Form2();
+                visualDatosLogeado.DatosLogeado = personal.VerInformacionCompleta(txtLegajo.Text);
+                visualDatosLogeado.Show();
+            }
+            catch(IndexOutOfRangeException)
+            {
+                MessageBox.Show("Ingrese Informacion valida");
+            }
         }
     }
 }
