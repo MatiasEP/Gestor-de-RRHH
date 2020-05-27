@@ -16,3 +16,12 @@ C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\obj\Debug\BLL.csproj.CoreCo
 C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\obj\Debug\BLL.dll
 C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\BLL\obj\Debug\BLL.pdb
+C:\Users\gilazo1996\Desktop\Plus Tec. Prog\proyecto_app\github repository\Gestor-de-RRHH\BLL\bin\Debug\BLL.dll
+C:\Users\gilazo1996\Desktop\Plus Tec. Prog\proyecto_app\github repository\Gestor-de-RRHH\BLL\bin\Debug\BLL.pdb
+C:\Users\gilazo1996\Desktop\Plus Tec. Prog\proyecto_app\github repository\Gestor-de-RRHH\BLL\bin\Debug\DAL.dll
+C:\Users\gilazo1996\Desktop\Plus Tec. Prog\proyecto_app\github repository\Gestor-de-RRHH\BLL\bin\Debug\DAL.pdb
+C:\Users\gilazo1996\Desktop\Plus Tec. Prog\proyecto_app\github repository\Gestor-de-RRHH\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\gilazo1996\Desktop\Plus Tec. Prog\proyecto_app\github repository\Gestor-de-RRHH\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\gilazo1996\Desktop\Plus Tec. Prog\proyecto_app\github repository\Gestor-de-RRHH\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\gilazo1996\Desktop\Plus Tec. Prog\proyecto_app\github repository\Gestor-de-RRHH\BLL\obj\Debug\BLL.dll
+C:\Users\gilazo1996\Desktop\Plus Tec. Prog\proyecto_app\github repository\Gestor-de-RRHH\BLL\obj\Debug\BLL.pdb

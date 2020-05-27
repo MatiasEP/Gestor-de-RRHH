@@ -44,7 +44,8 @@ namespace gestor_de_recursos_humanos
 
         private void btn_regist_empl_Click(object sender, EventArgs e)
         {
-
+            AltaPersonal nuevo_reg = new AltaPersonal();
+            nuevo_reg.Show();
         }
 
         private void btn_show_empl_Click(object sender, EventArgs e)
