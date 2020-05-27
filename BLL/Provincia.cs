@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Data;
 
 
 
@@ -27,6 +28,12 @@ public class Provincia : ClaseGenerica {
 		{
 			_localidades = value;
 		}
+	}
+
+	public DataTable VerProvincias()
+	{
+		DALProvincia provincias = new DALProvincia();
+		return provincias.sp_VerTodoProvincia();
 	}
 
 }//end Provincia

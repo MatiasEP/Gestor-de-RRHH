@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Data;
 
 
 
@@ -28,6 +29,11 @@ public class Localidad : ClaseGenerica
 		{
 			_barrios = value;
 		}
+	}
+	public DataTable VerLocalidadesEnProvincia(int claveProvincia)
+	{
+		DALLocalidad localidades = new DALLocalidad();
+		return localidades.sp_VerLocalidadesEnProvincia(claveProvincia);
 	}
 
 }//end Localidad

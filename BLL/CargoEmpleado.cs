@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Data;
 
 
 
@@ -27,6 +28,11 @@ public class CargoEmpleado : ClaseGenerica {
 		{
 			_permisos = value;
 		}
+	}
+	public DataTable vercargos()
+	{
+		DALCargo cargos = new DALCargo();
+		return cargos.sp_VerTodoCargo();
 	}
 
 }//end CargoEmpleado

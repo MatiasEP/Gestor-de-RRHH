@@ -10,11 +10,16 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Data;
 
 
 
 public class Genero : ClaseGenerica 
 {
-
+    public DataTable verGeneros()
+    {
+        DALGenero generos = new DALGenero();
+        return generos.sp_VerGenero();
+    }
 
 }//end Genero

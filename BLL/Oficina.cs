@@ -10,12 +10,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Data;
 
 
 
 public class Oficina : ClaseGenerica {
 
-	private Direccion _direccion;
+	private Direccion _direccion = new Direccion();
 
 	public Direccion Direccion
 	{
@@ -28,5 +29,12 @@ public class Oficina : ClaseGenerica {
 			_direccion = value;
 		}
 	}
+
+	public DataTable VerOficinas()
+	{
+		DALOficina oficinas = new DALOficina();
+		return oficinas.sp_VerTodoOficina();
+	}
+
 
 }//end Oficina

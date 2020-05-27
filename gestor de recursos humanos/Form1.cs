@@ -35,5 +35,11 @@ namespace gestor_de_recursos_humanos
                 MessageBox.Show("Ingrese Informacion valida");
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            AltaPersonal test = new AltaPersonal();
+            test.Show();
+        }
     }
 }

@@ -10,10 +10,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Data;
 
 
 
-public class Barrio : ClaseGenerica 
+public class Barrio : ClaseGenerica
 {
-
+    public DataTable VerBarriosEnLocalidad(int claveLocalidad)
+    {
+        DALBarrio barrios = new DALBarrio();
+        return barrios.sp_VerBarriosEnLocalidad(claveLocalidad);
+    }
 }//end Barrio

@@ -24,7 +24,7 @@ public class Personal : Persona {
 	private int _legajo;
 	private Oficina _oficina;
 	private Telefono _telefono;
-	private OrganigramaPersonal _organigrama;
+	private int _superior;
 	private string _contraseña;
 
 	public CargoEmpleado Cargo
@@ -111,15 +111,15 @@ public class Personal : Persona {
 		}
 	}
 
-	public OrganigramaPersonal Organigrama
+	public int Superior
 	{
 		get
 		{
-			return _organigrama;
+			return _superior;
 		}
 		set
 		{
-			_organigrama = value;
+			_superior = value;
 		}
 	}
 
@@ -143,6 +143,22 @@ public class Personal : Persona {
 	public DataTable VerInformacionCompleta(string legajo)
 	{
 		return (new personal()).TraerInformacionCompleta(legajo);
+	}
+
+	public void altaPersonal()
+	{
+		string fechaNac = "'"+FechaNacimiento.Año + "-" + FechaNacimiento.Mes + "-" + FechaNacimiento.Dia+"'";
+		string fechaIng = "'"+FechaIngreso.Año + "-" + FechaIngreso.Mes + "-" + FechaIngreso.Dia+"'";
+		AltaPersonal alta = new AltaPersonal();
+		if( !(alta.sp_ComprobarSiExistePersonal(Nombre,Apellido,Email)))
+		{
+			alta.sp_AltaPersonal(Nombre, Apellido, Email, Genero.ID, fechaNac, fechaIng, Direccion.Calle, Direccion.Numero, Direccion.TipoDireccion.ID, Direccion.Barrio.ID, Cargo.ID, Oficina.ID, Telefono.TipoTelefono.ID, Telefono.Numero, Telefono.Empresa, Superior, Contraseña);
+
+		}
+		else
+		{
+			throw new Exception();
+		}
 	}
 
 }//end Personal

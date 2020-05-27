@@ -15,11 +15,11 @@ using System.IO;
 
 public abstract class ClaseGenerica {
 
-	private char _descripcion;
+	private string _descripcion;
 	private int _id;
 
 
-	public char Descripcion
+	public string Descripcion
 	{
 		get
 		{
