@@ -10,10 +10,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-
-
+using System.Data;
+using System.Reflection;
 
 public class TipoTelefono : ClaseGenerica 
 {
+    public DataTable VerTiposDeTelefono()
+    {
+        DALTipoTelefono telefonos = new DALTipoTelefono();
+        return telefonos.sp_VerTodoTipoTelefono();
+    }
 
 }//end TipoTelefono

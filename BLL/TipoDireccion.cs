@@ -10,10 +10,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Data;
 
 
 
 public class TipoDireccion : ClaseGenerica 
 {
-
+    public DataTable VerTiposDeDireccion()
+    {
+        DALTipoDireccion direcciones = new DALTipoDireccion();
+        return direcciones.sp_VerTodoTipoDireccion();
+    }
 }//end TipoDireccion

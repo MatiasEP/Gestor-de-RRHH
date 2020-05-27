@@ -16,7 +16,7 @@ using System.IO;
 public class Direccion {
 
 	private Barrio _barrio;
-	private char _calle;
+	private string _calle;
 	private Localidad _localidad;
 	private int _numero;
 	private Provincia _provincia;
@@ -58,7 +58,7 @@ public class Direccion {
 		}
 	}
 
-	public char Calle
+	public string Calle
 	{
 		get
 		{
