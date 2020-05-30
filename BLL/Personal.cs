@@ -161,4 +161,10 @@ public class Personal : Persona {
 		}
 	}
 
+	public void modificarPersonal()
+	{
+		ModificarPersonal modificar = new ModificarPersonal();
+		modificar.sp_ModificarPersonal(Legajo, Nombre, Apellido, Email, Genero.ID, Direccion.Calle, Direccion.Numero, Direccion.TipoDireccion.ID, Direccion.Barrio.ID, Cargo.ID, Oficina.ID, Telefono.TipoTelefono.ID, Telefono.Numero, Superior);
+	}
+
 }//end Personal

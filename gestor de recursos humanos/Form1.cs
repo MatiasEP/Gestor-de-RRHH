@@ -39,7 +39,11 @@ namespace gestor_de_recursos_humanos
         private void Form1_Load(object sender, EventArgs e)
         {
             AltaPersonal test = new AltaPersonal();
-            test.Show();
+            test.Show(); 
+            ModificarPersonal test2 = new ModificarPersonal();
+            test2.DatosLogeado = new Personal().VerInformacionCompleta(2.ToString());
+            test2.legajo = 2;
+            test2.Show();
         }
     }
 }
