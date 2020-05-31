@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace gestor_de_recursos_humanos
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -25,10 +25,10 @@ namespace gestor_de_recursos_humanos
             resultado = personal.ComprobarUsuario(txtLegajo.Text, txtContraseña.Text);
             try
             {
-                DataRow row = resultado.Rows[0];
+                /*DataRow row = resultado.Rows[0];
                 Form2 visualDatosLogeado = new Form2();
                 visualDatosLogeado.DatosLogeado = personal.VerInformacionCompleta(txtLegajo.Text);
-                visualDatosLogeado.Show();
+                visualDatosLogeado.Show();*/
             }
             catch(IndexOutOfRangeException)
             {
@@ -38,12 +38,8 @@ namespace gestor_de_recursos_humanos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            AltaPersonal test = new AltaPersonal();
-            test.Show(); 
-            ModificarPersonal test2 = new ModificarPersonal();
-            test2.DatosLogeado = new Personal().VerInformacionCompleta(2.ToString());
-            test2.legajo = 2;
-            test2.Show();
+            VerPersonal test = new VerPersonal();
+            test.Show();
         }
     }
 }

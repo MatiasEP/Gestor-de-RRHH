@@ -1,6 +1,6 @@
 ﻿namespace gestor_de_recursos_humanos
 {
-    partial class Form2
+    partial class VerPersonal
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.lblLegSup = new System.Windows.Forms.Label();
             this.lblFing = new System.Windows.Forms.Label();
             this.lblOficina = new System.Windows.Forms.Label();
@@ -63,9 +65,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.lblCargo = new System.Windows.Forms.Label();
+            this.dgrVerPersonal = new System.Windows.Forms.DataGridView();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrVerPersonal)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,6 +115,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(288, 452);
             this.panel1.TabIndex = 0;
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Location = new System.Drawing.Point(149, 117);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(61, 13);
+            this.lblCargo.TabIndex = 37;
+            this.lblCargo.Text = "_________";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(13, 118);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "Cargo: ";
             // 
             // lblLegSup
             // 
@@ -418,35 +440,65 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Legajo: ";
             // 
-            // label18
+            // dgrVerPersonal
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(13, 118);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 13);
-            this.label18.TabIndex = 36;
-            this.label18.Text = "Cargo: ";
+            this.dgrVerPersonal.AllowUserToAddRows = false;
+            this.dgrVerPersonal.AllowUserToDeleteRows = false;
+            this.dgrVerPersonal.AllowUserToResizeColumns = false;
+            this.dgrVerPersonal.AllowUserToResizeRows = false;
+            this.dgrVerPersonal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgrVerPersonal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgrVerPersonal.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgrVerPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgrVerPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrVerPersonal.GridColor = System.Drawing.SystemColors.Control;
+            this.dgrVerPersonal.Location = new System.Drawing.Point(287, -1);
+            this.dgrVerPersonal.Name = "dgrVerPersonal";
+            this.dgrVerPersonal.ReadOnly = true;
+            this.dgrVerPersonal.RowTemplate.ReadOnly = true;
+            this.dgrVerPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgrVerPersonal.ShowEditingIcon = false;
+            this.dgrVerPersonal.Size = new System.Drawing.Size(513, 394);
+            this.dgrVerPersonal.TabIndex = 1;
+            this.dgrVerPersonal.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrVerPersonal_CellEnter);
             // 
-            // lblCargo
+            // btnModificar
             // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(149, 117);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(61, 13);
-            this.lblCargo.TabIndex = 37;
-            this.lblCargo.Text = "_________";
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(396, 404);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(97, 38);
+            this.btnModificar.TabIndex = 2;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // Form2
+            // btnBorrar
+            // 
+            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Location = new System.Drawing.Point(582, 404);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(100, 38);
+            this.btnBorrar.TabIndex = 3;
+            this.btnBorrar.Text = "Desvincular";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // VerPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.dgrVerPersonal);
             this.Controls.Add(this.panel1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "VerPersonal";
+            this.Text = "Visualizar Personal";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrVerPersonal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -490,5 +542,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridView dgrVerPersonal;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }

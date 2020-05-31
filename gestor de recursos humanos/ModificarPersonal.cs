@@ -12,8 +12,8 @@ namespace gestor_de_recursos_humanos
 {
     public partial class ModificarPersonal : Form
     {
-        public DataTable DatosLogeado = new DataTable();
-        public int legajo = 2;
+        public DataTable DatosPersonal = new DataTable();
+        public int legajo;
         public ModificarPersonal()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace gestor_de_recursos_humanos
 
         private void ModificarPersonal_Load(object sender, EventArgs e)
         {
-            DataRow fila = DatosLogeado.Rows[0];
+            DataRow fila = DatosPersonal.Rows[0];
             txtAltura.Text = fila["Altura"].ToString();
             txtApellido.Text = fila["Apellido"].ToString();
             txtNombre.Text = fila["Nombre"].ToString();
@@ -121,7 +121,7 @@ namespace gestor_de_recursos_humanos
                 nuevo.Direccion = direccion;
                 nuevo.Telefono = telefono;
                 nuevo.Superior = Convert.ToInt32(txtLegajoSupervisor.Text);
-                nuevo.Legajo = 2;
+                nuevo.Legajo = legajo;
                 nuevo.modificarPersonal();
                 MessageBox.Show("Modificado Con Exito");
             }

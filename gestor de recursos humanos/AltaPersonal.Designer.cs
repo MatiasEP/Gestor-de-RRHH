@@ -629,7 +629,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AltaPersonal";
-            this.Text = "AltaPersonal";
+            this.Text = "Registrar Personal";
             this.Load += new System.EventHandler(this.AltaPersonal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

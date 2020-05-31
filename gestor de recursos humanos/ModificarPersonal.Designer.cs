@@ -435,7 +435,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ModificarPersonal";
-            this.Text = "ModificarPersonal";
+            this.Text = "Modificar Personal";
             this.Load += new System.EventHandler(this.ModificarPersonal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

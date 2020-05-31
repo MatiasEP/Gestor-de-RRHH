@@ -167,4 +167,14 @@ public class Personal : Persona {
 		modificar.sp_ModificarPersonal(Legajo, Nombre, Apellido, Email, Genero.ID, Direccion.Calle, Direccion.Numero, Direccion.TipoDireccion.ID, Direccion.Barrio.ID, Cargo.ID, Oficina.ID, Telefono.TipoTelefono.ID, Telefono.Numero, Superior);
 	}
 
+	public DataTable VerTodoPersonal()
+	{
+		return new VerTodoPersonal().sp_VerTodoPersonal();
+	}
+
+	public void DesvincularPersonal(int legajo)
+	{
+		new DesvincularPersonal().BajaPersonal(legajo);
+	}
+
 }//end Personal

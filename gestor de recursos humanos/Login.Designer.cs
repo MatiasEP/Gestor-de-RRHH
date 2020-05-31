@@ -1,6 +1,6 @@
 ﻿namespace gestor_de_recursos_humanos
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -77,7 +77,7 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña";
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,8 +87,8 @@
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtLegajo);
             this.Controls.Add(this.btnLogin);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Login";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

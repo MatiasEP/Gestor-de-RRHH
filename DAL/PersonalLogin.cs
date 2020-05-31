@@ -13,9 +13,9 @@ public class personal
     {
         Conexion cPersonal = new Conexion();
         SqlParameter[] parametros = new SqlParameter[2];
-        SqlParameter pUsuario = cPersonal.crearParametro("@Legajo", legajo);
+        SqlParameter pLegajo = cPersonal.crearParametro("@Legajo", legajo);
         SqlParameter pContraseña = cPersonal.crearParametro("@Contraseña", contraseña);
-        parametros[0] = pUsuario;
+        parametros[0] = pLegajo;
         parametros[1] = pContraseña;
         return cPersonal.LeerPorStoreProcedure("sp_ComprobarUsuario", parametros);
     }

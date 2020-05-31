@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="AltaPersonal.cs" />
     <Compile Include="ClasesGenericas.cs" />
+    <Compile Include="DesvincularPersonal.cs" />
     <Compile Include="ModificarPersonal.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="PersonalLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VerTodoPersonal.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
