@@ -22,13 +22,11 @@ namespace gestor_de_recursos_humanos
         {
             Personal personal = new Personal();
             DataTable resultado = new DataTable();
-            resultado = personal.ComprobarUsuario(txtLegajo.Text, txtContraseña.Text);
             try
             {
-                /*DataRow row = resultado.Rows[0];
-                Form2 visualDatosLogeado = new Form2();
-                visualDatosLogeado.DatosLogeado = personal.VerInformacionCompleta(txtLegajo.Text);
-                visualDatosLogeado.Show();*/
+                resultado = personal.ComprobarUsuario(txtLegajo.Text, txtContraseña.Text);
+                DataRow row = resultado.Rows[0];
+                MessageBox.Show("Nombre: "+ row["Nombre"].ToString()+"\nApellido: "+row["Apellido"].ToString());
             }
             catch(IndexOutOfRangeException)
             {
@@ -40,6 +38,8 @@ namespace gestor_de_recursos_humanos
         {
             VerPersonal test = new VerPersonal();
             test.Show();
+            AltaPersonal test2 = new AltaPersonal();
+            test2.Show();
         }
     }
 }

@@ -122,5 +122,21 @@ namespace gestor_de_recursos_humanos
                 MessageBox.Show("Complete todos los campos con datos validos");
             }
         }
+
+        private void cbxProvincia_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int provincia = (Convert.ToInt32(cbxProvincia.SelectedValue.ToString()));
+            cbxLocalidad.DataSource = new Localidad().VerLocalidadesEnProvincia(provincia);
+            cbxLocalidad.DisplayMember = "Descripcion";
+            cbxLocalidad.ValueMember = "ID";
+        }
+
+        private void cbxLocalidad_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int localidad = (Convert.ToInt32(cbxLocalidad.SelectedValue.ToString()));
+            cbxBarrio.DataSource = new Barrio().VerBarriosEnLocalidad(localidad);
+            cbxBarrio.DisplayMember = "Descripcion";
+            cbxBarrio.ValueMember = "ID";
+        }
     }
 }

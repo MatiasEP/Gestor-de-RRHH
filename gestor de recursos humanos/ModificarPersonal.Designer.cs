@@ -39,13 +39,8 @@
             this.cbxTDireccion = new System.Windows.Forms.ComboBox();
             this.cbxTTelefono = new System.Windows.Forms.ComboBox();
             this.cbxGenero = new System.Windows.Forms.ComboBox();
-            this.txtLegajoSupervisor = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.txtAltura = new System.Windows.Forms.TextBox();
             this.txtCalle = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -63,10 +58,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.MaskedTextBox();
+            this.txtApellido = new System.Windows.Forms.MaskedTextBox();
+            this.txtAltura = new System.Windows.Forms.MaskedTextBox();
+            this.txtNumero = new System.Windows.Forms.MaskedTextBox();
+            this.txtLegajoSupervisor = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // cbxOficina
             // 
+            this.cbxOficina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxOficina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxOficina.FormattingEnabled = true;
             this.cbxOficina.Location = new System.Drawing.Point(251, 367);
@@ -97,6 +98,7 @@
             // 
             // cbxCargo
             // 
+            this.cbxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCargo.FormattingEnabled = true;
             this.cbxCargo.Location = new System.Drawing.Point(596, 367);
@@ -116,15 +118,18 @@
             // 
             // cbxProvincia
             // 
+            this.cbxProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxProvincia.FormattingEnabled = true;
             this.cbxProvincia.Location = new System.Drawing.Point(251, 118);
             this.cbxProvincia.Name = "cbxProvincia";
             this.cbxProvincia.Size = new System.Drawing.Size(180, 28);
             this.cbxProvincia.TabIndex = 94;
+            this.cbxProvincia.SelectionChangeCommitted += new System.EventHandler(this.cbxProvincia_SelectionChangeCommitted);
             // 
             // cbxBarrio
             // 
+            this.cbxBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxBarrio.FormattingEnabled = true;
             this.cbxBarrio.Location = new System.Drawing.Point(251, 152);
@@ -134,15 +139,18 @@
             // 
             // cbxLocalidad
             // 
+            this.cbxLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxLocalidad.FormattingEnabled = true;
             this.cbxLocalidad.Location = new System.Drawing.Point(596, 120);
             this.cbxLocalidad.Name = "cbxLocalidad";
             this.cbxLocalidad.Size = new System.Drawing.Size(176, 28);
             this.cbxLocalidad.TabIndex = 92;
+            this.cbxLocalidad.SelectionChangeCommitted += new System.EventHandler(this.cbxLocalidad_SelectionChangeCommitted);
             // 
             // cbxTDireccion
             // 
+            this.cbxTDireccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTDireccion.FormattingEnabled = true;
             this.cbxTDireccion.Location = new System.Drawing.Point(596, 154);
@@ -152,6 +160,7 @@
             // 
             // cbxTTelefono
             // 
+            this.cbxTTelefono.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTTelefono.FormattingEnabled = true;
             this.cbxTTelefono.Location = new System.Drawing.Point(251, 261);
@@ -161,20 +170,13 @@
             // 
             // cbxGenero
             // 
+            this.cbxGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGenero.FormattingEnabled = true;
             this.cbxGenero.Location = new System.Drawing.Point(251, 66);
             this.cbxGenero.Name = "cbxGenero";
             this.cbxGenero.Size = new System.Drawing.Size(180, 28);
             this.cbxGenero.TabIndex = 89;
-            // 
-            // txtLegajoSupervisor
-            // 
-            this.txtLegajoSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLegajoSupervisor.Location = new System.Drawing.Point(251, 413);
-            this.txtLegajoSupervisor.Name = "txtLegajoSupervisor";
-            this.txtLegajoSupervisor.Size = new System.Drawing.Size(180, 26);
-            this.txtLegajoSupervisor.TabIndex = 81;
             // 
             // txtEmail
             // 
@@ -184,22 +186,6 @@
             this.txtEmail.Size = new System.Drawing.Size(180, 26);
             this.txtEmail.TabIndex = 79;
             // 
-            // txtNumero
-            // 
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(596, 263);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(176, 26);
-            this.txtNumero.TabIndex = 78;
-            // 
-            // txtAltura
-            // 
-            this.txtAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAltura.Location = new System.Drawing.Point(596, 188);
-            this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(176, 26);
-            this.txtAltura.TabIndex = 77;
-            // 
             // txtCalle
             // 
             this.txtCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -207,22 +193,6 @@
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(180, 26);
             this.txtCalle.TabIndex = 76;
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(596, 32);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(176, 26);
-            this.txtApellido.TabIndex = 75;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(251, 32);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(180, 26);
-            this.txtNombre.TabIndex = 74;
             // 
             // label21
             // 
@@ -394,11 +364,76 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Nombre: ";
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.HidePromptOnLeave = true;
+            this.txtNombre.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
+            this.txtNombre.Location = new System.Drawing.Point(251, 32);
+            this.txtNombre.Mask = "??????????????????????????";
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PromptChar = ' ';
+            this.txtNombre.Size = new System.Drawing.Size(180, 26);
+            this.txtNombre.TabIndex = 106;
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.HidePromptOnLeave = true;
+            this.txtApellido.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
+            this.txtApellido.Location = new System.Drawing.Point(596, 32);
+            this.txtApellido.Mask = "???????????????????????????";
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.PromptChar = ' ';
+            this.txtApellido.Size = new System.Drawing.Size(176, 26);
+            this.txtApellido.TabIndex = 107;
+            // 
+            // txtAltura
+            // 
+            this.txtAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAltura.HidePromptOnLeave = true;
+            this.txtAltura.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
+            this.txtAltura.Location = new System.Drawing.Point(596, 191);
+            this.txtAltura.Mask = "9999999999";
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.PromptChar = ' ';
+            this.txtAltura.Size = new System.Drawing.Size(176, 26);
+            this.txtAltura.TabIndex = 108;
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.HidePromptOnLeave = true;
+            this.txtNumero.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
+            this.txtNumero.Location = new System.Drawing.Point(596, 261);
+            this.txtNumero.Mask = "9999999999";
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.PromptChar = ' ';
+            this.txtNumero.Size = new System.Drawing.Size(176, 26);
+            this.txtNumero.TabIndex = 109;
+            // 
+            // txtLegajoSupervisor
+            // 
+            this.txtLegajoSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLegajoSupervisor.HidePromptOnLeave = true;
+            this.txtLegajoSupervisor.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
+            this.txtLegajoSupervisor.Location = new System.Drawing.Point(251, 413);
+            this.txtLegajoSupervisor.Mask = "9999999999";
+            this.txtLegajoSupervisor.Name = "txtLegajoSupervisor";
+            this.txtLegajoSupervisor.PromptChar = ' ';
+            this.txtLegajoSupervisor.Size = new System.Drawing.Size(180, 26);
+            this.txtLegajoSupervisor.TabIndex = 110;
+            // 
             // ModificarPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 493);
+            this.Controls.Add(this.txtLegajoSupervisor);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.txtAltura);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.cbxOficina);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.btnModificar);
@@ -410,13 +445,8 @@
             this.Controls.Add(this.cbxTDireccion);
             this.Controls.Add(this.cbxTTelefono);
             this.Controls.Add(this.cbxGenero);
-            this.Controls.Add(this.txtLegajoSupervisor);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtNumero);
-            this.Controls.Add(this.txtAltura);
             this.Controls.Add(this.txtCalle);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
@@ -455,13 +485,8 @@
         private System.Windows.Forms.ComboBox cbxTDireccion;
         private System.Windows.Forms.ComboBox cbxTTelefono;
         private System.Windows.Forms.ComboBox cbxGenero;
-        private System.Windows.Forms.TextBox txtLegajoSupervisor;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.TextBox txtCalle;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
@@ -479,5 +504,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txtNombre;
+        private System.Windows.Forms.MaskedTextBox txtApellido;
+        private System.Windows.Forms.MaskedTextBox txtAltura;
+        private System.Windows.Forms.MaskedTextBox txtNumero;
+        private System.Windows.Forms.MaskedTextBox txtLegajoSupervisor;
     }
 }
