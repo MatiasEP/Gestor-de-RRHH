@@ -46,12 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarPassword.Designer.cs">
+      <DependentUpon>ActualizarPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="AltaPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AltaPersonal.Designer.cs">
       <DependentUpon>AltaPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlVista.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +71,11 @@
     <Compile Include="VerPersonal.Designer.cs">
       <DependentUpon>VerPersonal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="MenuGestor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="MenuGestor.Designer.cs">
+      <DependentUpon>MenuGestor.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificarPersonal.cs">
       <SubType>Form</SubType>
@@ -78,6 +85,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActualizarPassword.resx">
+      <DependentUpon>ActualizarPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltaPersonal.resx">
       <DependentUpon>AltaPersonal.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,8 +97,8 @@
     <EmbeddedResource Include="VerPersonal.resx">
       <DependentUpon>VerPersonal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="MenuGestor.resx">
+      <DependentUpon>MenuGestor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarPersonal.resx">
       <DependentUpon>ModificarPersonal.cs</DependentUpon>

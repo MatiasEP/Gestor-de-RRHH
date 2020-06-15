@@ -12,6 +12,10 @@ namespace gestor_de_recursos_humanos
 {
     public partial class ModificarPersonal : Form
     {
+        private ControlVista controlVista;
+
+        internal ControlVista ControlVista { get => controlVista; set => controlVista = value; }
+
         public DataTable DatosPersonal = new DataTable();
         public int legajo;
         public ModificarPersonal()
@@ -124,6 +128,9 @@ namespace gestor_de_recursos_humanos
                 nuevo.Legajo = legajo;
                 nuevo.modificarPersonal();
                 MessageBox.Show("Modificado Con Exito");
+                
+                controlVista.VerPersonal.Show();
+                controlVista.Modificar.Hide();
             }
             catch (Exception)
             {
@@ -145,6 +152,12 @@ namespace gestor_de_recursos_humanos
             cbxBarrio.DataSource = new Barrio().VerBarriosEnLocalidad(localidad);
             cbxBarrio.DisplayMember = "Descripcion";
             cbxBarrio.ValueMember = "ID";
+        }
+
+        private void ModificarPersonal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ControlVista.Modificar.Hide();
+            ControlVista.VerPersonal.Show();
         }
     }
 }

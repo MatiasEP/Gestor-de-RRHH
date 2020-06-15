@@ -460,6 +460,7 @@
             this.dgrVerPersonal.ShowEditingIcon = false;
             this.dgrVerPersonal.Size = new System.Drawing.Size(513, 394);
             this.dgrVerPersonal.TabIndex = 1;
+            this.dgrVerPersonal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrVerPersonal_CellContentClick);
             this.dgrVerPersonal.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrVerPersonal_CellEnter);
             // 
             // btnModificar
@@ -495,6 +496,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "VerPersonal";
             this.Text = "Visualizar Personal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VerPersonal_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

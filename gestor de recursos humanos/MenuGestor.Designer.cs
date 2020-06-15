@@ -1,6 +1,6 @@
 ﻿namespace gestor_de_recursos_humanos
 {
-    partial class Form3
+    partial class MenuGestor
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,10 @@
             this.btn_regist_empl = new System.Windows.Forms.Button();
             this.btn_show_empl = new System.Windows.Forms.Button();
             this.btn_sign_out = new System.Windows.Forms.Button();
+            this.LUsuario = new System.Windows.Forms.Label();
+            this.LCargo = new System.Windows.Forms.Label();
+            this.legajoActual = new System.Windows.Forms.TextBox();
+            this.cargoActual = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_show_org
@@ -126,11 +130,47 @@
             this.btn_sign_out.UseVisualStyleBackColor = true;
             this.btn_sign_out.Click += new System.EventHandler(this.btn_sign_out_Click);
             // 
-            // Form3
+            // LUsuario
+            // 
+            this.LUsuario.AutoSize = true;
+            this.LUsuario.Location = new System.Drawing.Point(15, 12);
+            this.LUsuario.Name = "LUsuario";
+            this.LUsuario.Size = new System.Drawing.Size(39, 13);
+            this.LUsuario.TabIndex = 9;
+            this.LUsuario.Text = "Legajo";
+            // 
+            // LCargo
+            // 
+            this.LCargo.AutoSize = true;
+            this.LCargo.Location = new System.Drawing.Point(15, 32);
+            this.LCargo.Name = "LCargo";
+            this.LCargo.Size = new System.Drawing.Size(41, 13);
+            this.LCargo.TabIndex = 10;
+            this.LCargo.Text = "Cargo :";
+            // 
+            // legajoActual
+            // 
+            this.legajoActual.Location = new System.Drawing.Point(61, 9);
+            this.legajoActual.Name = "legajoActual";
+            this.legajoActual.Size = new System.Drawing.Size(100, 20);
+            this.legajoActual.TabIndex = 11;
+            // 
+            // cargoActual
+            // 
+            this.cargoActual.Location = new System.Drawing.Point(61, 29);
+            this.cargoActual.Name = "cargoActual";
+            this.cargoActual.Size = new System.Drawing.Size(100, 20);
+            this.cargoActual.TabIndex = 12;
+            // 
+            // MenuGestor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cargoActual);
+            this.Controls.Add(this.legajoActual);
+            this.Controls.Add(this.LCargo);
+            this.Controls.Add(this.LUsuario);
             this.Controls.Add(this.btn_sign_out);
             this.Controls.Add(this.btn_show_empl);
             this.Controls.Add(this.btn_regist_empl);
@@ -139,9 +179,12 @@
             this.Controls.Add(this.btn_show_nesec);
             this.Controls.Add(this.btn_new_nesec);
             this.Controls.Add(this.btn_show_org);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Name = "MenuGestor";
+            this.Text = "Menu Gestor";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuGestor_FormClosed);
+            this.Load += new System.EventHandler(this.MenuGestor_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -155,5 +198,9 @@
         private System.Windows.Forms.Button btn_regist_empl;
         private System.Windows.Forms.Button btn_show_empl;
         private System.Windows.Forms.Button btn_sign_out;
+        private System.Windows.Forms.Label LUsuario;
+        private System.Windows.Forms.Label LCargo;
+        private System.Windows.Forms.TextBox legajoActual;
+        private System.Windows.Forms.TextBox cargoActual;
     }
 }

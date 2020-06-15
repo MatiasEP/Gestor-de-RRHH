@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnLogin = new System.Windows.Forms.Button();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLegajo = new System.Windows.Forms.MaskedTextBox();
@@ -40,17 +40,19 @@
             this.btnLogin.Location = new System.Drawing.Point(409, 284);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Ingresar";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(395, 214);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(100, 20);
-            this.txtContraseña.TabIndex = 2;
+            this.txtContrasena.Location = new System.Drawing.Point(395, 214);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
+            this.txtContrasena.Size = new System.Drawing.Size(100, 20);
+            this.txtContrasena.TabIndex = 2;
+            this.txtContrasena.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -79,7 +81,7 @@
             this.txtLegajo.Name = "txtLegajo";
             this.txtLegajo.PromptChar = ' ';
             this.txtLegajo.Size = new System.Drawing.Size(100, 20);
-            this.txtLegajo.TabIndex = 5;
+            this.txtLegajo.TabIndex = 0;
             // 
             // Login
             // 
@@ -89,7 +91,7 @@
             this.Controls.Add(this.txtLegajo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.btnLogin);
             this.Name = "Login";
             this.Text = "Login";
@@ -102,7 +104,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txtLegajo;

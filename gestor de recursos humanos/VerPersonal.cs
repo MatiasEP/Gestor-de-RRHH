@@ -12,6 +12,10 @@ namespace gestor_de_recursos_humanos
 {
     public partial class VerPersonal : Form
     {
+        private ControlVista controlVista;
+
+        internal ControlVista ControlVista { get => controlVista; set => controlVista = value; }
+
         public DataTable PersonalSeleccionado = new DataTable();
         string seleccionado;
         public VerPersonal()
@@ -54,10 +58,16 @@ namespace gestor_de_recursos_humanos
         {
             try
             {
-                ModificarPersonal modificar = new ModificarPersonal();
-                modificar.legajo = Convert.ToInt32(seleccionado);
-                modificar.DatosPersonal = PersonalSeleccionado;
-                modificar.Show();
+
+                ControlVista.Modificar = new ModificarPersonal();
+
+                ControlVista.Modificar.ControlVista = ControlVista;
+                ControlVista.Modificar.legajo = Convert.ToInt32(seleccionado);
+                ControlVista.Modificar.DatosPersonal = PersonalSeleccionado;
+
+                this.Hide();
+                ControlVista.Modificar.Show();
+
             }
             catch(Exception)
             {
@@ -78,6 +88,17 @@ namespace gestor_de_recursos_humanos
                 MessageBox.Show("Seleccione un Empleado a desvincular");
             }
             dgrVerPersonal.DataSource = new Personal().VerTodoPersonal();
+        }
+
+        private void VerPersonal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ControlVista.VerPersonal.Hide();
+            ControlVista.Menu.Show();
+        }
+
+        private void dgrVerPersonal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

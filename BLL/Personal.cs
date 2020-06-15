@@ -22,15 +22,19 @@ public class Personal : Persona {
 	private Fecha _fechaIngreso;
 	private Fecha _fechaNacimiento;
 	private int _legajo;
+	private int _documento;
 	private Oficina _oficina;
 	private Telefono _telefono;
 	private int _superior;
-	private string _contraseña;
+	private string _contrasena;
 
 	public CargoEmpleado Cargo
 	{
 		get
 		{
+			if (_cargo==null) {
+				_cargo = new CargoEmpleado();
+			}
 			return _cargo;
 		}
 		set
@@ -50,6 +54,7 @@ public class Personal : Persona {
 			_direccion = value;
 		}
 	}
+
 
 	public Fecha FechaIngreso
 	{
@@ -123,21 +128,32 @@ public class Personal : Persona {
 		}
 	}
 
-	public string Contraseña
+	public string Contrasena
 	{
 		get
 		{
-			return _contraseña;
+			return _contrasena;
 		}
 		set
 		{
-			_contraseña = value;
+			_contrasena = value;
 		}
 	}
 
-	public DataTable ComprobarUsuario(string legajo, string contraseña)
+	public int Documento { get => _documento; set => _documento = value; }
+
+	public DataTable ComprobarUsuario(string legajo, string contrasena)
 	{
-		return (new personal()).ComprobarUsuario(legajo, contraseña);
+		DataTable resultado = (new personal()).ComprobarUsuario(legajo, contrasena);
+		DataRow row = resultado.Rows[0];
+		this.Nombre = row["Nombre"].ToString();
+		this.Apellido = row["Apellido"].ToString();
+		this.Legajo = int.Parse(row["Legajo"].ToString());
+		this.Cargo.ID = int.Parse(row["FK_Cargo"].ToString());
+		this.Cargo.Descripcion = row["Cargo"].ToString();
+		this.Contrasena = row["Contrasena"].ToString();
+		this.Documento = int.Parse(row["Documento"].ToString());
+		return resultado;
 	}
 
 	public DataTable VerInformacionCompleta(string legajo)
@@ -152,7 +168,7 @@ public class Personal : Persona {
 		AltaPersonal alta = new AltaPersonal();
 		if( !(alta.sp_ComprobarSiExistePersonal(Nombre,Apellido,Email)))
 		{
-			alta.sp_AltaPersonal(Nombre, Apellido, Email, Genero.ID, fechaNac, fechaIng, Direccion.Calle, Direccion.Numero, Direccion.TipoDireccion.ID, Direccion.Barrio.ID, Cargo.ID, Oficina.ID, Telefono.TipoTelefono.ID, Telefono.Numero, Telefono.Empresa, Superior, Contraseña);
+			alta.sp_AltaPersonal(Nombre, Apellido, Documento, Email, Genero.ID, fechaNac, fechaIng, Direccion.Calle, Direccion.Numero, Direccion.TipoDireccion.ID, Direccion.Barrio.ID, Cargo.ID, Oficina.ID, Telefono.TipoTelefono.ID, Telefono.Numero, Telefono.Empresa, Superior, Contrasena);
 
 		}
 		else
@@ -165,6 +181,12 @@ public class Personal : Persona {
 	{
 		ModificarPersonal modificar = new ModificarPersonal();
 		modificar.sp_ModificarPersonal(Legajo, Nombre, Apellido, Email, Genero.ID, Direccion.Calle, Direccion.Numero, Direccion.TipoDireccion.ID, Direccion.Barrio.ID, Cargo.ID, Oficina.ID, Telefono.TipoTelefono.ID, Telefono.Numero, Superior);
+	}
+	public void modificarPassword()
+	{
+		ModificarPersonal modificar = new ModificarPersonal();
+		modificar.sp_ModificarPersonalPassword(Legajo,Contrasena);
+
 	}
 
 	public DataTable VerTodoPersonal()

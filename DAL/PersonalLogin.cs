@@ -9,14 +9,14 @@ using System.Data.SqlClient;
 
 public class personal
 {
-    public DataTable ComprobarUsuario(string legajo, string contraseña)
+    public DataTable ComprobarUsuario(string legajo, string contrasena)
     {
         Conexion cPersonal = new Conexion();
         SqlParameter[] parametros = new SqlParameter[2];
         SqlParameter pLegajo = cPersonal.crearParametro("@Legajo", legajo);
-        SqlParameter pContraseña = cPersonal.crearParametro("@Contraseña", contraseña);
+        SqlParameter pContrasena = cPersonal.crearParametro("@Contrasena", contrasena);
         parametros[0] = pLegajo;
-        parametros[1] = pContraseña;
+        parametros[1] = pContrasena;
         return cPersonal.LeerPorStoreProcedure("sp_ComprobarUsuario", parametros);
     }
 

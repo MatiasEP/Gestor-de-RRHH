@@ -12,6 +12,9 @@ namespace gestor_de_recursos_humanos
 {
     public partial class AltaPersonal : Form
     {
+        private ControlVista controlVista;
+        internal ControlVista ControlVista { get => controlVista; set => controlVista = value; }
+
         public AltaPersonal()
         {
             InitializeComponent();
@@ -113,9 +116,13 @@ namespace gestor_de_recursos_humanos
                 nuevo.FechaNacimiento = fNac;
                 nuevo.FechaIngreso = fIng;
                 nuevo.Superior = Convert.ToInt32(txtLegajoSupervisor.Text);
-                nuevo.Contraseña = txtContraseña.Text.ToString();
+                nuevo.Documento = int.Parse(txtDocumento.Text.ToString());
+                nuevo.Contrasena = ControlVista.GetHashString(txtDocumento.Text.ToString());
                 nuevo.altaPersonal();
-                MessageBox.Show("Agregado Con Exito");
+                MessageBox.Show("Agregado Con Exito - La constraseña es Su Documento ");
+
+                controlVista.Alta.Hide();
+                controlVista.showMenu();
             }
             catch (Exception)
             {
@@ -137,6 +144,32 @@ namespace gestor_de_recursos_humanos
             cbxBarrio.DataSource = new Barrio().VerBarriosEnLocalidad(localidad);
             cbxBarrio.DisplayMember = "Descripcion";
             cbxBarrio.ValueMember = "ID";
+        }
+
+        private void AltaPersonal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            controlVista.Alta.Hide();
+            ControlVista.Menu.Show();
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLegajoSupervisor_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void Documento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxTDireccion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,12 +29,13 @@ public class AltaPersonal
             return true;
         }
     }
-    public void sp_AltaPersonal(string nombre, string apellido, string email, int genero, string fNac, string fIng, string calle, int altura, int tipoDireccion, int barrio, int cargo, int oficina, int tipoTel, int numeroTel, string empresaTel, int supervisor, string contraseña)
+    public void sp_AltaPersonal(string nombre, string apellido, int documento, string email, int genero, string fNac, string fIng, string calle, int altura, int tipoDireccion, int barrio, int cargo, int oficina, int tipoTel, int numeroTel, string empresaTel, int supervisor, string contrasena)
     {
         Conexion aPersonal = new Conexion();
-        SqlParameter[] parametros = new SqlParameter[17];
+        SqlParameter[] parametros = new SqlParameter[18];
         SqlParameter pNombre = aPersonal.crearParametro("@Nombre", nombre);
         SqlParameter pApellido = aPersonal.crearParametro("@Apellido", apellido);
+        SqlParameter pDocumento = aPersonal.crearParametro("@Documento", documento);
         SqlParameter pEmail = aPersonal.crearParametro("@Email", email);
         SqlParameter pGenero = aPersonal.crearParametro("@Genero", genero);
         SqlParameter pfNac = aPersonal.crearParametro("@FechaNacimiento", fNac);
@@ -49,24 +50,25 @@ public class AltaPersonal
         SqlParameter pnTel = aPersonal.crearParametro("@NumeroTelefono", numeroTel);
         SqlParameter peTel = aPersonal.crearParametro("@EmpresaTelefono", empresaTel);
         SqlParameter pSupervisor = aPersonal.crearParametro("@FK_Supervisor", supervisor);
-        SqlParameter pContraseña = aPersonal.crearParametro("@Contraseña", contraseña);
+        SqlParameter pContrasena = aPersonal.crearParametro("@Contrasena", contrasena);
         parametros[0] = pNombre;
         parametros[1] = pApellido;
-        parametros[2] = pEmail;
-        parametros[3] = pGenero;
-        parametros[4] = pfNac;
-        parametros[5] = pfIng;
-        parametros[6] = pCalle;
-        parametros[7] = pAltura;
-        parametros[8] = ptDireccion;
-        parametros[9] = pBarrio;
-        parametros[10] = pCargo;
-        parametros[11] = pOficina;
-        parametros[12] = ptTel;
-        parametros[13] = pnTel;
-        parametros[14] = peTel;
-        parametros[15] = pSupervisor;
-        parametros[16] = pContraseña;
+        parametros[2] = pDocumento;
+        parametros[3] = pEmail;
+        parametros[4] = pGenero;
+        parametros[5] = pfNac;
+        parametros[6] = pfIng;
+        parametros[7] = pCalle;
+        parametros[8] = pAltura;
+        parametros[9] = ptDireccion;
+        parametros[10] = pBarrio;
+        parametros[11] = pCargo;
+        parametros[12] = pOficina;
+        parametros[13] = ptTel;
+        parametros[14] = pnTel;
+        parametros[15] = peTel;
+        parametros[16] = pSupervisor;
+        parametros[17] = pContrasena;
         aPersonal.LeerPorStoreProcedure("sp_AltaPersonal", parametros);
     }
 }

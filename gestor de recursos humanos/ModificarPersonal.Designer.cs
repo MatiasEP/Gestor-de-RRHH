@@ -466,6 +466,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ModificarPersonal";
             this.Text = "Modificar Personal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ModificarPersonal_FormClosed);
             this.Load += new System.EventHandler(this.ModificarPersonal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -10,7 +10,7 @@ public class ModificarPersonal
     public void sp_ModificarPersonal(int legajo, string nombre, string apellido, string email, int genero, string calle, int altura, int tipoDireccion, int barrio, int cargo, int oficina, int tipoTel, int numeroTel, int supervisor)
     {
         Conexion aPersonal = new Conexion();
-        SqlParameter[] parametros = new SqlParameter[14];
+        SqlParameter[] parametros = new SqlParameter[15];
         SqlParameter pLegajo = aPersonal.crearParametro("@Legajo", legajo);
         SqlParameter pNombre = aPersonal.crearParametro("@Nombre", nombre);
         SqlParameter pApellido = aPersonal.crearParametro("@Apellido", apellido);
@@ -40,5 +40,16 @@ public class ModificarPersonal
         parametros[12] = pnTel;
         parametros[13] = pSupervisor;
         aPersonal.LeerPorStoreProcedure("sp_ModificarPersonal", parametros);
+    }
+
+    public void sp_ModificarPersonalPassword(int legajo, string password)
+    {
+        Conexion aPersonal = new Conexion();
+        SqlParameter[] parametros = new SqlParameter[2];
+        SqlParameter pLegajo = aPersonal.crearParametro("@Legajo", legajo);
+        SqlParameter pPassword = aPersonal.crearParametro("@Password", password);
+        parametros[0] = pLegajo;
+        parametros[1] = pPassword;
+        aPersonal.LeerPorStoreProcedure("sp_ModificarPersonalPassword", parametros);
     }
 }
