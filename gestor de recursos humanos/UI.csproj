@@ -59,11 +59,41 @@
       <DependentUpon>AltaPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlVista.cs" />
+    <Compile Include="CrearBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearBusqueda.Designer.cs">
+      <DependentUpon>CrearBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearNecesidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearNecesidad.Designer.cs">
+      <DependentUpon>CrearNecesidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organigrama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organigrama.Designer.cs">
+      <DependentUpon>Organigrama.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerBusquedas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerBusquedas.Designer.cs">
+      <DependentUpon>VerBusquedas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerNecesidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerNecesidad.Designer.cs">
+      <DependentUpon>VerNecesidad.cs</DependentUpon>
     </Compile>
     <Compile Include="VerPersonal.cs">
       <SubType>Form</SubType>
@@ -91,8 +121,23 @@
     <EmbeddedResource Include="AltaPersonal.resx">
       <DependentUpon>AltaPersonal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearBusqueda.resx">
+      <DependentUpon>CrearBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearNecesidad.resx">
+      <DependentUpon>CrearNecesidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organigrama.resx">
+      <DependentUpon>Organigrama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerBusquedas.resx">
+      <DependentUpon>VerBusquedas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerNecesidad.resx">
+      <DependentUpon>VerNecesidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerPersonal.resx">
       <DependentUpon>VerPersonal.cs</DependentUpon>

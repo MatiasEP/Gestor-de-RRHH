@@ -13,6 +13,12 @@ namespace gestor_de_recursos_humanos
         private VerPersonal verPersonal;
         private ModificarPersonal modificar;
         private ActualizarPassword actualizarPassword;
+        private Organigrama organigrama;
+        private VerNecesidad verNecesidad;
+        private VerBusquedas verBusquedas;
+        private CrearNecesidad crearNecesidad;
+        private CrearBusqueda crearBusqueda;
+
 
         public ControlVista()
         {
@@ -25,6 +31,11 @@ namespace gestor_de_recursos_humanos
         public MenuGestor Menu { get => menu; set => menu = value; }
         public AltaPersonal Alta { get => alta; set => alta = value; }
         public ActualizarPassword ActualizarPassword { get => actualizarPassword; set => actualizarPassword = value; }
+        public Organigrama Organigrama { get => organigrama; set => organigrama = value; }
+        public VerNecesidad VerNecesidad { get => verNecesidad; set => verNecesidad = value; }
+        public VerBusquedas VerBusquedas { get => verBusquedas; set => verBusquedas = value; }
+        public CrearNecesidad CrearNecesidad { get => crearNecesidad; set => crearNecesidad = value; }
+        public CrearBusqueda CrearBusqueda { get => crearBusqueda; set => crearBusqueda = value; }
 
         internal void showMenu()
         {

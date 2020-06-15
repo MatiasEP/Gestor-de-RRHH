@@ -44,5 +44,11 @@ namespace gestor_de_recursos_humanos
             }
              
         }
+
+        private void ActualizarPassword_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ControlVista.ActualizarPassword.Hide();
+            ControlVista.Login.Show();
+        }
     }
 }

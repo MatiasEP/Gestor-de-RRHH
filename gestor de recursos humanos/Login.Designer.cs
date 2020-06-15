@@ -45,7 +45,7 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txtContraseña
+            // txtContrasena
             // 
             this.txtContrasena.Location = new System.Drawing.Point(395, 214);
             this.txtContrasena.Name = "txtContrasena";
@@ -77,11 +77,11 @@
             this.txtLegajo.HidePromptOnLeave = true;
             this.txtLegajo.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
             this.txtLegajo.Location = new System.Drawing.Point(395, 117);
-            this.txtLegajo.Mask = "999999999";
             this.txtLegajo.Name = "txtLegajo";
             this.txtLegajo.PromptChar = ' ';
             this.txtLegajo.Size = new System.Drawing.Size(100, 20);
             this.txtLegajo.TabIndex = 0;
+            this.txtLegajo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLegajo_KeyPress);
             // 
             // Login
             // 

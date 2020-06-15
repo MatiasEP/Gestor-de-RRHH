@@ -93,6 +93,7 @@
             this.Controls.Add(this.passUno);
             this.Name = "ActualizarPassword";
             this.Text = "ActualizarPassword";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ActualizarPassword_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

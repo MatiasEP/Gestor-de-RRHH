@@ -69,5 +69,10 @@ namespace gestor_de_recursos_humanos
         private void Form1_Load(object sender, EventArgs e)
         {
         }
+
+        private void txtLegajo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }
