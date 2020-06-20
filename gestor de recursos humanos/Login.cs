@@ -68,7 +68,7 @@ namespace gestor_de_recursos_humanos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Form test = new VerPostulantes();
+            Form test = new CrearNecesidad();
             test.Show();
         }
 

@@ -15,6 +15,8 @@ namespace gestor_de_recursos_humanos
         private ControlVista controlVista;
         internal ControlVista ControlVista { get => controlVista; set => controlVista = value; }
 
+        public int creador = 1; //modificar para que dependa del gerente logeado
+
         public CrearNecesidad()
         {
             InitializeComponent();
@@ -29,6 +31,20 @@ namespace gestor_de_recursos_humanos
         {
             ControlVista.CrearNecesidad.Hide();
             ControlVista.Menu.Show();
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            if(txtAsunto.Text=="" || txtNecesidad.Text=="")
+            {
+                MessageBox.Show("No se permiten campos vacios");
+            }
+            else
+            {
+                string asunto = txtAsunto.Text;
+                string necesidad = txtNecesidad.Text;
+                new Necesidad().CrearNecesidad(asunto, necesidad, creador);
+            }
         }
     }
 }

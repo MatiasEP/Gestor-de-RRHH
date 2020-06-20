@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AltaPersonal.cs" />
     <Compile Include="ClasesGenericas.cs" />
+    <Compile Include="CrearNecesidad.cs" />
     <Compile Include="VerIDPostulante.cs" />
     <Compile Include="DesvincularPersonal.cs" />
     <Compile Include="ModificarPersonal.cs" />

@@ -88,4 +88,9 @@ public class Necesidad : ClaseGenerica {
 		return new VerTodoNecesidad().sp_VerTodoNecesidad();
 	}
 
+	public void CrearNecesidad(string Asunto, string Necesidad, int Creador)
+	{
+		new CrearNecesidad().sp_CrearNecesidad(Asunto, Necesidad, Creador);
+	}
+
 }//end Necesidad
