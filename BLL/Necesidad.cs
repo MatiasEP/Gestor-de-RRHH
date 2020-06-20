@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Data;
+using System.Data.SqlClient;
 
 
 
@@ -79,6 +81,11 @@ public class Necesidad : ClaseGenerica {
 		{
 			_prioridad = value;
 		}
+	}
+
+	public DataTable VerTodoNecesidad()
+	{
+		return new VerTodoNecesidad().sp_VerTodoNecesidad();
 	}
 
 }//end Necesidad

@@ -22,13 +22,25 @@ namespace gestor_de_recursos_humanos
 
         private void VerNecesidad_Load(object sender, EventArgs e)
         {
-
+            dgrVerNecesidad.DataSource = new Necesidad().VerTodoNecesidad();
         }
 
         private void VerNecesidad_FormClosed(object sender, FormClosedEventArgs e)
         {
             ControlVista.VerNecesidad.Hide();
             ControlVista.Menu.Show();
+        }
+
+        private void dgrVerNecesidad_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgrVerNecesidad_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            txtAsunto.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Asunto"].Value.ToString();
+            txtDescripcion.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Necesidad"].Value.ToString();
+            lblCreador.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Creador"].Value.ToString();
         }
     }
 }

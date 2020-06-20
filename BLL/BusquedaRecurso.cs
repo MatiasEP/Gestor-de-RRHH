@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Data;
+using System.Data.SqlClient;
 
 
 
@@ -66,6 +68,11 @@ public class BusquedaRecurso {
 		{
 			_necesidad = value;
 		}
+	}
+
+	public DataTable VerTodoBusqueda()
+	{
+		return new VerTodoBusqueda().sp_VerTodoBusqueda();
 	}
 
 

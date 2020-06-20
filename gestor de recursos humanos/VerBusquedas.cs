@@ -22,13 +22,21 @@ namespace gestor_de_recursos_humanos
 
         private void VerBusquedas_Load(object sender, EventArgs e)
         {
-
+            dgrVerBusqueda.DataSource = new BusquedaRecurso().VerTodoBusqueda();
         }
 
         private void VerBusquedas_FormClosed(object sender, FormClosedEventArgs e)
         {
             ControlVista.VerBusquedas.Hide();
             ControlVista.Menu.Show();
+        }
+
+        private void dgrVerBusqueda_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            txtAsunto.Text = dgrVerBusqueda.Rows[e.RowIndex].Cells["Asunto"].Value.ToString();
+            txtDescripcion.Text = dgrVerBusqueda.Rows[e.RowIndex].Cells["Busqueda"].Value.ToString();
+            lblOficina.Text = dgrVerBusqueda.Rows[e.RowIndex].Cells["Oficina"].Value.ToString();
+            lblCreador.Text = dgrVerBusqueda.Rows[e.RowIndex].Cells["Creador"].Value.ToString();
         }
     }
 }

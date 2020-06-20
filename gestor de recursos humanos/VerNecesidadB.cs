@@ -100,10 +100,5 @@ namespace gestor_de_recursos_humanos
         {
 
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

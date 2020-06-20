@@ -68,6 +68,8 @@ namespace gestor_de_recursos_humanos
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Form test = new VerBusquedas();
+            test.Show();
         }
 
         private void txtLegajo_KeyPress(object sender, KeyPressEventArgs e)
