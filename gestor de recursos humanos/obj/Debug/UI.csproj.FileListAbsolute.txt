@@ -56,3 +56,4 @@ C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\gestor de recursos humanos\obj\
 C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\gestor de recursos humanos\obj\Debug\gestor_de_recursos_humanos.VerBusquedas.resources
 C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\gestor de recursos humanos\obj\Debug\gestor_de_recursos_humanos.VerNecesidad.resources
 C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\gestor de recursos humanos\obj\Debug\gestor_de_recursos_humanos.MenuGestor.resources
+C:\Users\Haskell\Documents\GitHub\Gestor-de-RRHH\gestor de recursos humanos\obj\Debug\gestor_de_recursos_humanos.VerPostulantes.resources

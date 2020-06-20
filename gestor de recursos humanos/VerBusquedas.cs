@@ -15,6 +15,7 @@ namespace gestor_de_recursos_humanos
         private ControlVista controlVista;
         internal ControlVista ControlVista { get => controlVista; set => controlVista = value; }
 
+        public int busqueda;
         public VerBusquedas()
         {
             InitializeComponent();
@@ -37,6 +38,18 @@ namespace gestor_de_recursos_humanos
             txtDescripcion.Text = dgrVerBusqueda.Rows[e.RowIndex].Cells["Busqueda"].Value.ToString();
             lblOficina.Text = dgrVerBusqueda.Rows[e.RowIndex].Cells["Oficina"].Value.ToString();
             lblCreador.Text = dgrVerBusqueda.Rows[e.RowIndex].Cells["Creador"].Value.ToString();
+            busqueda = Convert.ToInt32(dgrVerBusqueda.Rows[e.RowIndex].Cells["Numero"].Value);
+        }
+
+        private void btnVerPostulantes_Click(object sender, EventArgs e)
+        {
+            ControlVista.VerPostulantes = new VerPostulantes();
+
+            ControlVista.VerPostulantes.ControlVista = ControlVista;
+            ControlVista.VerPostulantes.numeroBusqueda = busqueda;
+
+            this.Hide();
+            ControlVista.VerPostulantes.Show();
         }
     }
 }

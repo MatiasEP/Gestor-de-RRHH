@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace gestor_de_recursos_humanos
+{
+    public partial class VerPostulantes : Form
+    {
+        private ControlVista controlVista;
+
+        internal ControlVista ControlVista { get => controlVista; set => controlVista = value; }
+
+        public int numeroBusqueda = 1;
+        public VerPostulantes()
+        {
+            InitializeComponent();
+        }
+
+        private void VerPostulantes_Load(object sender, EventArgs e)
+        {
+            dgrVerPostulantes.DataSource = new Postulante().VerPostulantes(numeroBusqueda);
+        }
+
+        private void dgrVerPostulantes_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            lblNombre.Text = dgrVerPostulantes.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
+            lblApellido.Text = dgrVerPostulantes.Rows[e.RowIndex].Cells["Apellido"].Value.ToString();
+            txtCurriculum.Text = dgrVerPostulantes.Rows[e.RowIndex].Cells["Curriculum"].Value.ToString();
+            lblEstado.Text = dgrVerPostulantes.Rows[e.RowIndex].Cells["Estado"].Value.ToString();
+        }
+    }
+}

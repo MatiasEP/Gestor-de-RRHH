@@ -32,14 +32,14 @@
             this.btnVerPostulantes = new System.Windows.Forms.Button();
             this.dgrVerBusqueda = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblOficina = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtAsunto = new System.Windows.Forms.TextBox();
             this.lblCreador = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblOficina = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerBusqueda)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,7 @@
             this.btnVerPostulantes.TabIndex = 10;
             this.btnVerPostulantes.Text = "Ver Postulantes";
             this.btnVerPostulantes.UseVisualStyleBackColor = true;
+            this.btnVerPostulantes.Click += new System.EventHandler(this.btnVerPostulantes_Click);
             // 
             // dgrVerBusqueda
             // 
@@ -101,6 +102,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(288, 452);
             this.panel1.TabIndex = 8;
+            // 
+            // lblOficina
+            // 
+            this.lblOficina.AutoSize = true;
+            this.lblOficina.Location = new System.Drawing.Point(90, 404);
+            this.lblOficina.Name = "lblOficina";
+            this.lblOficina.Size = new System.Drawing.Size(121, 13);
+            this.lblOficina.TabIndex = 19;
+            this.lblOficina.Text = "___________________";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 404);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Oficina:";
             // 
             // txtDescripcion
             // 
@@ -157,24 +176,6 @@
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Asunto: ";
-            // 
-            // lblOficina
-            // 
-            this.lblOficina.AutoSize = true;
-            this.lblOficina.Location = new System.Drawing.Point(90, 404);
-            this.lblOficina.Name = "lblOficina";
-            this.lblOficina.Size = new System.Drawing.Size(121, 13);
-            this.lblOficina.TabIndex = 19;
-            this.lblOficina.Text = "___________________";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 404);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Oficina:";
             // 
             // VerBusquedas
             // 

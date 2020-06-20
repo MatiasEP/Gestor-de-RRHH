@@ -10,8 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-
-
+using System.Data;
+using System.Data.SqlClient;
 
 public class Postulante : Persona 
 {
@@ -29,6 +29,11 @@ public class Postulante : Persona
 			_URL_CV = value;
 		}
 
+	}
+
+	public DataTable VerPostulantes(int Busqueda)
+	{
+		return new VerPostulantes().sp_VerPostulantesEnBusqueda(Busqueda);
 	}
 
 }//end Postulante
