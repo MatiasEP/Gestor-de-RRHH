@@ -34,5 +34,15 @@ namespace gestor_de_recursos_humanos
             txtCurriculum.Text = dgrVerPostulantes.Rows[e.RowIndex].Cells["Curriculum"].Value.ToString();
             lblEstado.Text = dgrVerPostulantes.Rows[e.RowIndex].Cells["Estado"].Value.ToString();
         }
+
+        private void btnProponerPostulante_Click(object sender, EventArgs e)
+        {
+            int ID;
+            Postulante aux = new Postulante();
+            ID = aux.VerIDPostulante(lblNombre.Text, lblApellido.Text);
+            aux.ModificarEstadoPostulante(ID,numeroBusqueda,2);
+
+            dgrVerPostulantes.DataSource = new Postulante().VerPostulantes(numeroBusqueda);
+        }
     }
 }

@@ -32,14 +32,14 @@
             this.btnProponerPostulante = new System.Windows.Forms.Button();
             this.dgrVerPostulantes = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtCurriculum = new System.Windows.Forms.TextBox();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtCurriculum = new System.Windows.Forms.TextBox();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerPostulantes)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,7 @@
             this.btnProponerPostulante.TabIndex = 14;
             this.btnProponerPostulante.Text = "Proponer postulante";
             this.btnProponerPostulante.UseVisualStyleBackColor = true;
+            this.btnProponerPostulante.Click += new System.EventHandler(this.btnProponerPostulante_Click);
             // 
             // dgrVerPostulantes
             // 
@@ -102,6 +103,42 @@
             this.panel1.Size = new System.Drawing.Size(288, 452);
             this.panel1.TabIndex = 12;
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(90, 20);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(121, 13);
+            this.lblNombre.TabIndex = 23;
+            this.lblNombre.Text = "___________________";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Nombre:";
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(90, 42);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(121, 13);
+            this.lblApellido.TabIndex = 21;
+            this.lblApellido.Text = "___________________";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Apellido:";
+            // 
             // txtCurriculum
             // 
             this.txtCurriculum.Enabled = false;
@@ -138,42 +175,6 @@
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Curriculum:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(90, 20);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(121, 13);
-            this.lblNombre.TabIndex = 23;
-            this.lblNombre.Text = "___________________";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Nombre:";
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(90, 42);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(121, 13);
-            this.lblApellido.TabIndex = 21;
-            this.lblApellido.Text = "___________________";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Apellido:";
             // 
             // VerPostulantes
             // 

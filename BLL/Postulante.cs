@@ -36,4 +36,15 @@ public class Postulante : Persona
 		return new VerPostulantes().sp_VerPostulantesEnBusqueda(Busqueda);
 	}
 
+
+	public void ModificarEstadoPostulante(int FK_Postulante, int FK_Busqueda, int FK_Estado)
+	{
+		new ModificarEstadoPostulante().sp_ModificarEstadoPostulante(FK_Postulante, FK_Busqueda, FK_Estado);
+	}
+
+	public int VerIDPostulante(string Nombre, string Apellido)
+	{
+		return new VerIDPostulante().sp_VerIDPostulante(Nombre, Apellido);
+	}
+
 }//end Postulante
