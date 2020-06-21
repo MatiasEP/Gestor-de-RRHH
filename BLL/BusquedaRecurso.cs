@@ -75,5 +75,10 @@ public class BusquedaRecurso {
 		return new VerTodoBusqueda().sp_VerTodoBusqueda();
 	}
 
+	public void CrearBusqueda(int ID, string Asunto, string Busqueda, int Creador, int Oficina)
+	{
+		new CrearBusqueda().sp_CrearBusqueda(ID, Asunto, Busqueda, Creador, Oficina);
+	}
+
 
 }//end BusquedaRecurso

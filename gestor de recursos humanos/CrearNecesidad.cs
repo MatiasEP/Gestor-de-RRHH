@@ -44,6 +44,7 @@ namespace gestor_de_recursos_humanos
                 string asunto = txtAsunto.Text;
                 string necesidad = txtNecesidad.Text;
                 new Necesidad().CrearNecesidad(asunto, necesidad, creador);
+                MessageBox.Show("Creado con exito");
             }
         }
     }
