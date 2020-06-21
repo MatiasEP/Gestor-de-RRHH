@@ -28,6 +28,10 @@ namespace gestor_de_recursos_humanos
             cbxOficina.DataSource = new Oficina().VerOficinas();
             cbxOficina.DisplayMember = "Descripcion";
             cbxOficina.ValueMember = "ID";
+
+            DataTable necesidadAux = new Necesidad().VerNecesidadPorID(Necesidad);
+            txtAsunto.Text = necesidadAux.Rows[0]["Asunto"].ToString();
+            txtBusqueda.Text = necesidadAux.Rows[0]["Necesidad"].ToString();
         }
 
         private void CrearBusqueda_FormClosed(object sender, FormClosedEventArgs e)
