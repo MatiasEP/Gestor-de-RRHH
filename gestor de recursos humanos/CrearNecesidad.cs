@@ -15,8 +15,6 @@ namespace gestor_de_recursos_humanos
         private ControlVista controlVista;
         internal ControlVista ControlVista { get => controlVista; set => controlVista = value; }
 
-        public int creador = 1; //modificar para que dependa del gerente logeado
-
         public CrearNecesidad()
         {
             InitializeComponent();
@@ -43,7 +41,7 @@ namespace gestor_de_recursos_humanos
             {
                 string asunto = txtAsunto.Text;
                 string necesidad = txtNecesidad.Text;
-                new Necesidad().CrearNecesidad(asunto, necesidad, creador);
+                new Necesidad().CrearNecesidad(asunto, necesidad, ControlVista.Personal.ID);
                 MessageBox.Show("Creado con exito");
             }
         }

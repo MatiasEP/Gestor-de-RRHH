@@ -146,6 +146,7 @@ public class Personal : Persona {
 	{
 		DataTable resultado = (new personal()).ComprobarUsuario(legajo, contrasena);
 		DataRow row = resultado.Rows[0];
+		this.ID = int.Parse(row["ID"].ToString());
 		this.Nombre = row["Nombre"].ToString();
 		this.Apellido = row["Apellido"].ToString();
 		this.Legajo = int.Parse(row["Legajo"].ToString());
