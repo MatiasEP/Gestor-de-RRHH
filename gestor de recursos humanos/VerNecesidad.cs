@@ -15,9 +15,12 @@ namespace gestor_de_recursos_humanos
         private ControlVista controlVista;
         internal ControlVista ControlVista { get => controlVista; set => controlVista = value; }
 
+        private int ID;
         public VerNecesidad()
         {
             InitializeComponent();
+            controlVista = new ControlVista();
+            controlVista.VerNecesidad = this;
         }
 
         private void VerNecesidad_Load(object sender, EventArgs e)
@@ -41,6 +44,18 @@ namespace gestor_de_recursos_humanos
             txtAsunto.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Asunto"].Value.ToString();
             txtDescripcion.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Necesidad"].Value.ToString();
             lblCreador.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Creador"].Value.ToString();
+            ID = Convert.ToInt32(dgrVerNecesidad.Rows[e.RowIndex].Cells["N°"].Value);
+        }
+
+        private void btnVerPropuestos_Click(object sender, EventArgs e)
+        {
+            ControlVista.VerPropuestos = new VerPropuestos();
+
+            //ControlVista.VerPropuestos.ControlVista = ControlVista;
+            ControlVista.VerPropuestos.necesidad = ID;
+
+            this.Hide();
+            ControlVista.VerPropuestos.Show();
         }
     }
 }

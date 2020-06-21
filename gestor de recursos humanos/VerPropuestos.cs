@@ -37,7 +37,10 @@ namespace gestor_de_recursos_humanos
             ID = aux.VerIDPostulante(lblNombre.Text, lblApellido.Text);
             aux.ModificarEstadoPostulante(ID, necesidad, 4);
 
-            dgrVerPropuestos.DataSource = new Postulante().VerPostulantes(necesidad);
+            lblNombre.Text = "__________";
+            lblApellido.Text = "__________";
+            txtCurriculum.Text = "";
+            dgrVerPropuestos.DataSource = new Necesidad().VerPropuestosDeNecesidad(necesidad);
         }
 
         private void btnRechazar_Click(object sender, EventArgs e)
@@ -47,7 +50,10 @@ namespace gestor_de_recursos_humanos
             ID = aux.VerIDPostulante(lblNombre.Text, lblApellido.Text);
             aux.ModificarEstadoPostulante(ID, necesidad, 3);
 
-            dgrVerPropuestos.DataSource = new Postulante().VerPostulantes(necesidad);
+            lblNombre.Text = "__________";
+            lblApellido.Text = "__________";
+            txtCurriculum.Text = "";
+            dgrVerPropuestos.DataSource = new Necesidad().VerPropuestosDeNecesidad(necesidad);
         }
     }
 }

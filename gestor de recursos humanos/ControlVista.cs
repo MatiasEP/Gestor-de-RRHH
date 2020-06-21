@@ -19,6 +19,7 @@ namespace gestor_de_recursos_humanos
         private CrearNecesidad crearNecesidad;
         private CrearBusqueda crearBusqueda;
         private VerPostulantes verPostulantes;
+        private VerPropuestos verPropuestos;
 
 
         public ControlVista()
@@ -38,6 +39,7 @@ namespace gestor_de_recursos_humanos
         public CrearNecesidad CrearNecesidad { get => crearNecesidad; set => crearNecesidad = value; }
         public CrearBusqueda CrearBusqueda { get => crearBusqueda; set => crearBusqueda = value; }
         public VerPostulantes VerPostulantes { get => verPostulantes; set => verPostulantes = value; }
+        public VerPropuestos VerPropuestos { get => verPropuestos; set => verPropuestos = value; }
 
         internal void showMenu()
         {
