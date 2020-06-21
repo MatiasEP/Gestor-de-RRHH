@@ -25,7 +25,13 @@ namespace gestor_de_recursos_humanos
         {
             if (this.passDos.Text.Equals(this.passUno.Text))
             {
-                if (!this.passUno.Text.Equals(ControlVista.Personal.Documento.ToString())) 
+                if (string.IsNullOrWhiteSpace(this.passDos.Text))
+                {
+                    MessageBox.Show("Contraseña invalida");
+
+                }
+                else
+                    if (!this.passUno.Text.Equals(ControlVista.Personal.Documento.ToString())) 
                 {
                     controlVista.Personal.Contrasena = ControlVista.GetHashString(this.passUno.Text);
                     controlVista.Personal.modificarPassword();
