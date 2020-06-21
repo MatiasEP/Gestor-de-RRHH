@@ -52,6 +52,7 @@
     <Compile Include="PersonalLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VerNecesidadPorID.cs" />
+    <Compile Include="VerPropuestos.cs" />
     <Compile Include="VerTodoNecesidad.cs" />
     <Compile Include="VerTodoBusqueda.cs" />
     <Compile Include="VerPostulantesEnBusqueda.cs" />

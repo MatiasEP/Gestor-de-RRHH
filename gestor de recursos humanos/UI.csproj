@@ -121,6 +121,12 @@
     <Compile Include="VerPostulantes.Designer.cs">
       <DependentUpon>VerPostulantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerPropuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerPropuestos.Designer.cs">
+      <DependentUpon>VerPropuestos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ActualizarPassword.resx">
       <DependentUpon>ActualizarPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +171,9 @@
     </Compile>
     <EmbeddedResource Include="VerPostulantes.resx">
       <DependentUpon>VerPostulantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerPropuestos.resx">
+      <DependentUpon>VerPropuestos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

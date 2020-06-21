@@ -97,4 +97,9 @@ public class Necesidad : ClaseGenerica {
 		return new VerNecesidadPorID().sp_VerNecesidadPorID(ID);
 	}
 
+	public DataTable VerPropuestosDeNecesidad(int necesidad)
+	{
+		return new VerPropuestos().sp_VerPropuestosDeNecesidad(necesidad);
+	}
+
 }//end Necesidad
