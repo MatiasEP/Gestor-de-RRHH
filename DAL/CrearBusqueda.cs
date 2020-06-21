@@ -23,6 +23,6 @@ public class CrearBusqueda
         parametros[2] = pBusqueda;
         parametros[3] = pCreador;
         parametros[4] = pOficina;
-        cBusqueda.LeerPorStoreProcedure("sp_CrearNecesidad", parametros);
+        cBusqueda.LeerPorStoreProcedure("sp_CrearBusqueda", parametros);
     }
 }

@@ -52,6 +52,7 @@
             this.btnVolver.TabIndex = 7;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnCrearBusqueda
             // 
@@ -62,6 +63,7 @@
             this.btnCrearBusqueda.TabIndex = 6;
             this.btnCrearBusqueda.Text = "Crear busqueda";
             this.btnCrearBusqueda.UseVisualStyleBackColor = true;
+            this.btnCrearBusqueda.Click += new System.EventHandler(this.btnCrearBusqueda_Click);
             // 
             // dgrVerNecesidad
             // 

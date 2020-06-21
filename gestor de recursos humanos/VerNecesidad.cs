@@ -26,6 +26,14 @@ namespace gestor_de_recursos_humanos
         private void VerNecesidad_Load(object sender, EventArgs e)
         {
             dgrVerNecesidad.DataSource = new Necesidad().VerTodoNecesidad();
+            if(ControlVista.Personal.Cargo.ID == 1)
+            {
+                btnCrearBusqueda.Hide();
+            }
+            if (ControlVista.Personal.Cargo.ID == 2)
+            {
+                btnVerPropuestos.Hide();
+            }
         }
 
         private void VerNecesidad_FormClosed(object sender, FormClosedEventArgs e)
@@ -51,11 +59,29 @@ namespace gestor_de_recursos_humanos
         {
             ControlVista.VerPropuestos = new VerPropuestos();
 
-            //ControlVista.VerPropuestos.ControlVista = ControlVista;
+            ControlVista.CrearBusqueda.ControlVista = ControlVista;
             ControlVista.VerPropuestos.necesidad = ID;
 
             this.Hide();
             ControlVista.VerPropuestos.Show();
+        }
+
+        private void btnCrearBusqueda_Click(object sender, EventArgs e)
+        {
+            ControlVista.CrearBusqueda = new CrearBusqueda();
+
+            ControlVista.CrearBusqueda.ControlVista = ControlVista;
+            ControlVista.CrearBusqueda.Necesidad = ID;
+            ControlVista.CrearBusqueda.creador = ControlVista.Personal.ID;
+
+            this.Hide();
+            ControlVista.CrearBusqueda.Show();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            ControlVista.showMenu();
+            this.Hide();
         }
     }
 }

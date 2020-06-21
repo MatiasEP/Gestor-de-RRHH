@@ -55,5 +55,11 @@ namespace gestor_de_recursos_humanos
                 MessageBox.Show("Creado con exito");
             }
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            controlVista.VerNecesidad.Show();
+        }
     }
 }
