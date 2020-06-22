@@ -42,17 +42,24 @@ namespace gestor_de_recursos_humanos
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            if (txtAsunto.Text == "" || txtBusqueda.Text == "")
+            try
             {
-                MessageBox.Show("No se permiten campos vacios");
+                if (txtAsunto.Text == "" || txtBusqueda.Text == "")
+                {
+                    MessageBox.Show("No se permiten campos vacios");
+                }
+                else
+                {
+                    string asunto = txtAsunto.Text;
+                    string busqueda = txtBusqueda.Text;
+                    int oficina = Convert.ToInt32(cbxOficina.SelectedValue);
+                    new BusquedaRecurso().CrearBusqueda(Necesidad, asunto, busqueda, creador, oficina);
+                    MessageBox.Show("Creado con exito");
+                }
             }
-            else
+            catch (Exception)
             {
-                string asunto = txtAsunto.Text;
-                string busqueda = txtBusqueda.Text;
-                int oficina = Convert.ToInt32(cbxOficina.SelectedValue);
-                new BusquedaRecurso().CrearBusqueda(Necesidad, asunto, busqueda, creador, oficina);
-                MessageBox.Show("Creado con exito");
+                MessageBox.Show("La necesidad ya posee una busqueda asociada");
             }
         }
 

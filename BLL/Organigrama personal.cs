@@ -10,8 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-
-
+using System.Data;
 
 public class OrganigramaPersonal 
 {
@@ -40,6 +39,16 @@ public class OrganigramaPersonal
 		{
 			_superior = value;
 		}
+	}
+
+	public DataTable VerSupervisor(int ID)
+	{
+		return new VerOrganigramaPersonal().sp_VerSupervisor(ID);
+	}
+
+	public DataTable VerSupervisados(int ID)
+	{
+		return new VerOrganigramaPersonal().sp_VerSupervisados(ID);
 	}
 
 }//end Organigrama personal

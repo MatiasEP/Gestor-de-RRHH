@@ -15,6 +15,7 @@ namespace gestor_de_recursos_humanos
         private ControlVista controlVista;
         internal ControlVista ControlVista { get => controlVista; set => controlVista = value; }
 
+        public int ID ;
         public Organigrama()
         {
             InitializeComponent();
@@ -22,10 +23,27 @@ namespace gestor_de_recursos_humanos
 
         private void Organigrama_Load(object sender, EventArgs e)
         {
-
+            dgrSupervisor.DataSource = new OrganigramaPersonal().VerSupervisor(ID);            
+            if(dgrSupervisor.Rows.Count == 0)
+            {
+                dgrSupervisor.Hide();
+                lblSupervisor.Show();
+            }
+            dgrSupervisados.DataSource = new OrganigramaPersonal().VerSupervisados(ID);
+            if (dgrSupervisados.Rows.Count == 0)
+            {
+                dgrSupervisados.Hide();
+                lblSupervisados.Show();
+            }
         }
 
         private void Organigrama_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ControlVista.Organigrama.Hide();
+            ControlVista.Menu.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             ControlVista.Organigrama.Hide();
             ControlVista.Menu.Show();

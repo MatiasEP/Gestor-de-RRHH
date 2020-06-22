@@ -16,7 +16,7 @@ namespace gestor_de_recursos_humanos
 
         internal ControlVista ControlVista { get => controlVista; set => controlVista = value; }
 
-        public int numeroBusqueda = 1;
+        public int numeroBusqueda;//agregar el ID de busqueda
         public VerPostulantes()
         {
             InitializeComponent();
