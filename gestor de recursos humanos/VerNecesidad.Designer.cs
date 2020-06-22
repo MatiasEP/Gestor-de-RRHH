@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVerPropuestos = new System.Windows.Forms.Button();
+            this.Line = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerNecesidad)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,13 +47,9 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.btnVolver.Location = new System.Drawing.Point(665, 400);
-=======
-            this.btnVolver.Location = new System.Drawing.Point(646, 400);
->>>>>>> refs/heads/master
+            this.btnVolver.Location = new System.Drawing.Point(657, 450);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(100, 43);
+            this.btnVolver.Size = new System.Drawing.Size(130, 33);
             this.btnVolver.TabIndex = 7;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -61,13 +58,9 @@
             // btnCrearBusqueda
             // 
             this.btnCrearBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.btnCrearBusqueda.Location = new System.Drawing.Point(459, 400);
-=======
-            this.btnCrearBusqueda.Location = new System.Drawing.Point(338, 400);
->>>>>>> refs/heads/master
+            this.btnCrearBusqueda.Location = new System.Drawing.Point(657, 411);
             this.btnCrearBusqueda.Name = "btnCrearBusqueda";
-            this.btnCrearBusqueda.Size = new System.Drawing.Size(97, 43);
+            this.btnCrearBusqueda.Size = new System.Drawing.Size(130, 33);
             this.btnCrearBusqueda.TabIndex = 6;
             this.btnCrearBusqueda.Text = "Crear busqueda";
             this.btnCrearBusqueda.UseVisualStyleBackColor = true;
@@ -91,7 +84,7 @@
             this.dgrVerNecesidad.RowTemplate.ReadOnly = true;
             this.dgrVerNecesidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrVerNecesidad.ShowEditingIcon = false;
-            this.dgrVerNecesidad.Size = new System.Drawing.Size(513, 394);
+            this.dgrVerNecesidad.Size = new System.Drawing.Size(513, 407);
             this.dgrVerNecesidad.TabIndex = 5;
             this.dgrVerNecesidad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrVerNecesidad_CellContentClick);
             this.dgrVerNecesidad.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrVerNecesidad_CellEnter);
@@ -107,7 +100,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 452);
+            this.panel1.Size = new System.Drawing.Size(288, 450);
             this.panel1.TabIndex = 4;
             // 
             // txtDescripcion
@@ -168,25 +161,29 @@
             // 
             // btnVerPropuestos
             // 
-<<<<<<< HEAD
-            this.btnVerPropuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnVerPropuestos.Location = new System.Drawing.Point(562, 400);
-=======
             this.btnVerPropuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerPropuestos.Location = new System.Drawing.Point(484, 400);
->>>>>>> refs/heads/master
+            this.btnVerPropuestos.Location = new System.Drawing.Point(657, 411);
             this.btnVerPropuestos.Name = "btnVerPropuestos";
-            this.btnVerPropuestos.Size = new System.Drawing.Size(97, 43);
+            this.btnVerPropuestos.Size = new System.Drawing.Size(130, 33);
             this.btnVerPropuestos.TabIndex = 8;
             this.btnVerPropuestos.Text = "Ver propuestos";
             this.btnVerPropuestos.UseVisualStyleBackColor = true;
             this.btnVerPropuestos.Click += new System.EventHandler(this.btnVerPropuestos_Click);
             // 
+            // Line
+            // 
+            this.Line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Line.Location = new System.Drawing.Point(18, 447);
+            this.Line.Name = "Line";
+            this.Line.Size = new System.Drawing.Size(770, 2);
+            this.Line.TabIndex = 17;
+            // 
             // VerNecesidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.Line);
             this.Controls.Add(this.btnVerPropuestos);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnCrearBusqueda);
@@ -216,5 +213,6 @@
         private System.Windows.Forms.TextBox txtAsunto;
         private System.Windows.Forms.Label lblCreador;
         private System.Windows.Forms.Button btnVerPropuestos;
+        private System.Windows.Forms.Label Line;
     }
 }

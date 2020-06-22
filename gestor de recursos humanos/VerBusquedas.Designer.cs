@@ -40,6 +40,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Line = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerBusqueda)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,9 +48,9 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(668, 400);
+            this.btnVolver.Location = new System.Drawing.Point(657, 450);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(100, 43);
+            this.btnVolver.Size = new System.Drawing.Size(130, 33);
             this.btnVolver.TabIndex = 11;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -58,9 +59,9 @@
             // btnVerPostulantes
             // 
             this.btnVerPostulantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerPostulantes.Location = new System.Drawing.Point(397, 400);
+            this.btnVerPostulantes.Location = new System.Drawing.Point(657, 410);
             this.btnVerPostulantes.Name = "btnVerPostulantes";
-            this.btnVerPostulantes.Size = new System.Drawing.Size(97, 43);
+            this.btnVerPostulantes.Size = new System.Drawing.Size(130, 33);
             this.btnVerPostulantes.TabIndex = 10;
             this.btnVerPostulantes.Text = "Ver Postulantes";
             this.btnVerPostulantes.UseVisualStyleBackColor = true;
@@ -84,7 +85,7 @@
             this.dgrVerBusqueda.RowTemplate.ReadOnly = true;
             this.dgrVerBusqueda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrVerBusqueda.ShowEditingIcon = false;
-            this.dgrVerBusqueda.Size = new System.Drawing.Size(513, 394);
+            this.dgrVerBusqueda.Size = new System.Drawing.Size(513, 404);
             this.dgrVerBusqueda.TabIndex = 9;
             this.dgrVerBusqueda.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrVerBusqueda_CellEnter);
             // 
@@ -101,13 +102,14 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 452);
+            this.panel1.Size = new System.Drawing.Size(288, 449);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblOficina
             // 
             this.lblOficina.AutoSize = true;
-            this.lblOficina.Location = new System.Drawing.Point(90, 404);
+            this.lblOficina.Location = new System.Drawing.Point(94, 400);
             this.lblOficina.Name = "lblOficina";
             this.lblOficina.Size = new System.Drawing.Size(121, 13);
             this.lblOficina.TabIndex = 19;
@@ -116,7 +118,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 404);
+            this.label4.Location = new System.Drawing.Point(17, 400);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 20;
@@ -129,7 +131,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(256, 299);
+            this.txtDescripcion.Size = new System.Drawing.Size(256, 292);
             this.txtDescripcion.TabIndex = 18;
             // 
             // txtAsunto
@@ -145,7 +147,7 @@
             // lblCreador
             // 
             this.lblCreador.AutoSize = true;
-            this.lblCreador.Location = new System.Drawing.Point(90, 426);
+            this.lblCreador.Location = new System.Drawing.Point(94, 422);
             this.lblCreador.Name = "lblCreador";
             this.lblCreador.Size = new System.Drawing.Size(121, 13);
             this.lblCreador.TabIndex = 8;
@@ -154,7 +156,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(13, 426);
+            this.label17.Location = new System.Drawing.Point(17, 422);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(47, 13);
             this.label17.TabIndex = 17;
@@ -178,11 +180,21 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Asunto: ";
             // 
+            // Line
+            // 
+            this.Line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Line.Location = new System.Drawing.Point(18, 446);
+            this.Line.Name = "Line";
+            this.Line.Size = new System.Drawing.Size(770, 2);
+            this.Line.TabIndex = 22;
+            this.Line.Click += new System.EventHandler(this.Line_Click);
+            // 
             // VerBusquedas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.Line);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnVerPostulantes);
             this.Controls.Add(this.dgrVerBusqueda);
@@ -212,5 +224,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblOficina;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Line;
     }
 }

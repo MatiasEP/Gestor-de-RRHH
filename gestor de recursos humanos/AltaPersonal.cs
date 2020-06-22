@@ -171,5 +171,11 @@ namespace gestor_de_recursos_humanos
         {
 
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            controlVista.Alta.Hide();
+            ControlVista.Menu.Show();
+        }
     }
 }

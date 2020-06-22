@@ -47,6 +47,7 @@ namespace gestor_de_recursos_humanos
         {
             ControlVista.Organigrama.Hide();
             ControlVista.Menu.Show();
+            ControlVista.Menu.Location = ControlVista.VerPostulantes.Location;
         }
     }
 }

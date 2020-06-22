@@ -40,6 +40,7 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Line = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerPostulantes)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,9 +48,9 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(652, 400);
+            this.btnVolver.Location = new System.Drawing.Point(658, 450);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(100, 43);
+            this.btnVolver.Size = new System.Drawing.Size(130, 33);
             this.btnVolver.TabIndex = 15;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -58,9 +59,9 @@
             // btnProponerPostulante
             // 
             this.btnProponerPostulante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProponerPostulante.Location = new System.Drawing.Point(397, 400);
+            this.btnProponerPostulante.Location = new System.Drawing.Point(620, 408);
             this.btnProponerPostulante.Name = "btnProponerPostulante";
-            this.btnProponerPostulante.Size = new System.Drawing.Size(97, 43);
+            this.btnProponerPostulante.Size = new System.Drawing.Size(168, 33);
             this.btnProponerPostulante.TabIndex = 14;
             this.btnProponerPostulante.Text = "Proponer postulante";
             this.btnProponerPostulante.UseVisualStyleBackColor = true;
@@ -84,7 +85,7 @@
             this.dgrVerPostulantes.RowTemplate.ReadOnly = true;
             this.dgrVerPostulantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrVerPostulantes.ShowEditingIcon = false;
-            this.dgrVerPostulantes.Size = new System.Drawing.Size(513, 394);
+            this.dgrVerPostulantes.Size = new System.Drawing.Size(508, 402);
             this.dgrVerPostulantes.TabIndex = 13;
             this.dgrVerPostulantes.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrVerPostulantes_CellEnter);
             // 
@@ -101,7 +102,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 452);
+            this.panel1.Size = new System.Drawing.Size(288, 450);
             this.panel1.TabIndex = 12;
             // 
             // lblNombre
@@ -147,13 +148,13 @@
             this.txtCurriculum.Multiline = true;
             this.txtCurriculum.Name = "txtCurriculum";
             this.txtCurriculum.ReadOnly = true;
-            this.txtCurriculum.Size = new System.Drawing.Size(256, 315);
+            this.txtCurriculum.Size = new System.Drawing.Size(256, 316);
             this.txtCurriculum.TabIndex = 18;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(90, 426);
+            this.lblEstado.Location = new System.Drawing.Point(90, 415);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(121, 13);
             this.lblEstado.TabIndex = 8;
@@ -162,7 +163,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(13, 426);
+            this.label17.Location = new System.Drawing.Point(17, 417);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(43, 13);
             this.label17.TabIndex = 17;
@@ -177,11 +178,20 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Curriculum:";
             // 
+            // Line
+            // 
+            this.Line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Line.Location = new System.Drawing.Point(18, 447);
+            this.Line.Name = "Line";
+            this.Line.Size = new System.Drawing.Size(770, 2);
+            this.Line.TabIndex = 16;
+            // 
             // VerPostulantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.Line);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnProponerPostulante);
             this.Controls.Add(this.dgrVerPostulantes);
@@ -211,5 +221,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Line;
     }
 }

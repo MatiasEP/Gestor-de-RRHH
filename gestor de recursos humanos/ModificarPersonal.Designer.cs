@@ -63,6 +63,8 @@
             this.txtAltura = new System.Windows.Forms.MaskedTextBox();
             this.txtNumero = new System.Windows.Forms.MaskedTextBox();
             this.txtLegajoSupervisor = new System.Windows.Forms.MaskedTextBox();
+            this.Line = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbxOficina
@@ -87,10 +89,10 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(384, 447);
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.Location = new System.Drawing.Point(522, 451);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(94, 34);
+            this.btnModificar.Size = new System.Drawing.Size(130, 33);
             this.btnModificar.TabIndex = 103;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -424,11 +426,32 @@
             this.txtLegajoSupervisor.Size = new System.Drawing.Size(180, 26);
             this.txtLegajoSupervisor.TabIndex = 110;
             // 
+            // Line
+            // 
+            this.Line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Line.Location = new System.Drawing.Point(18, 446);
+            this.Line.Name = "Line";
+            this.Line.Size = new System.Drawing.Size(770, 2);
+            this.Line.TabIndex = 111;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(658, 451);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 33);
+            this.button1.TabIndex = 112;
+            this.button1.Text = "Volver";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ModificarPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 493);
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Line);
             this.Controls.Add(this.txtLegajoSupervisor);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.txtAltura);
@@ -510,5 +533,7 @@
         private System.Windows.Forms.MaskedTextBox txtAltura;
         private System.Windows.Forms.MaskedTextBox txtNumero;
         private System.Windows.Forms.MaskedTextBox txtLegajoSupervisor;
+        private System.Windows.Forms.Label Line;
+        private System.Windows.Forms.Button button1;
     }
 }

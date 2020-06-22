@@ -50,12 +50,24 @@ namespace gestor_de_recursos_humanos
 
             this.Hide();
             ControlVista.VerPostulantes.Show();
+
+            ControlVista.VerPostulantes.Location = ControlVista.Login.Location;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             ControlVista.VerBusquedas.Hide();
             ControlVista.Menu.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Line_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

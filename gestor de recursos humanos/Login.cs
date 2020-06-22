@@ -48,6 +48,7 @@ namespace gestor_de_recursos_humanos
                     controlVista.Login.limpiarDatos();
                     controlVista.Login.Hide();
                     controlVista.showMenu();
+
                 }
                 else 
                 {
@@ -75,6 +76,12 @@ namespace gestor_de_recursos_humanos
         private void txtLegajo_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }
