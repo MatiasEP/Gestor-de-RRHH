@@ -27,8 +27,10 @@ namespace gestor_de_recursos_humanos
         private void VerNecesidad_Load(object sender, EventArgs e)
         {
             dgrVerNecesidad.DataSource = new Necesidad().VerTodoNecesidad();
-            dgrVerNecesidad.Columns["ID"].Visible = false;
-            if(ControlVista.Personal.Cargo.ID == 1)
+            dgrVerNecesidad.Columns["Nro"].Visible = false;
+            btnVerPropuestos.Enabled = dgrVerNecesidad.RowCount != 0;
+
+            if (ControlVista.Personal.Cargo.ID == 1)
             {
                 btnCrearBusqueda.Hide();
             }
@@ -54,7 +56,7 @@ namespace gestor_de_recursos_humanos
 
         private void dgrVerNecesidad_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            IdNecesidad = int.Parse(dgrVerNecesidad.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+            IdNecesidad = int.Parse(dgrVerNecesidad.Rows[e.RowIndex].Cells["Nro"].Value.ToString());
             txtAsunto.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Asunto"].Value.ToString();
             txtDescripcion.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Necesidad"].Value.ToString();
             lblCreador.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Creador"].Value.ToString();

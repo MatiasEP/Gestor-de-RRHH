@@ -26,6 +26,11 @@ namespace gestor_de_recursos_humanos
         {
             necesidad = ControlVista.VerNecesidad.IdNecesidad;
             dgrVerPropuestos.DataSource = new Necesidad().VerPropuestosDeNecesidad(necesidad);
+
+            btnAprobar.Enabled = dgrVerPropuestos.RowCount != 0;
+            btnRechazar.Enabled = dgrVerPropuestos.RowCount != 0;
+
+
         }
 
         private void dgrVerPropuestos_CellEnter(object sender, DataGridViewCellEventArgs e)

@@ -165,5 +165,10 @@ namespace gestor_de_recursos_humanos
             controlVista.VerPersonal.Show();
             controlVista.Modificar.Hide();
         }
+
+        private void txtNombre_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

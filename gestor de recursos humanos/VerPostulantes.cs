@@ -30,6 +30,8 @@ namespace gestor_de_recursos_humanos
             btnProponerPostulante.Visible = controlVista.isRh();
             dgrVerPostulantes.DataSource = new Postulante().VerPostulantes(numeroBusqueda);
             dgrVerPostulantes.Columns["PostulanteID"].Visible = false;
+
+            btnProponerPostulante.Enabled = dgrVerPostulantes.RowCount != 0;
         }
 
         private void dgrVerPostulantes_CellEnter(object sender, DataGridViewCellEventArgs e)

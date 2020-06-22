@@ -38,6 +38,7 @@
             // passUno
             // 
             this.passUno.Location = new System.Drawing.Point(152, 14);
+            this.passUno.MaxLength = 60;
             this.passUno.Name = "passUno";
             this.passUno.PasswordChar = '*';
             this.passUno.Size = new System.Drawing.Size(100, 20);
@@ -47,6 +48,7 @@
             // passDos
             // 
             this.passDos.Location = new System.Drawing.Point(152, 41);
+            this.passDos.MaxLength = 60;
             this.passDos.Name = "passDos";
             this.passDos.PasswordChar = '*';
             this.passDos.Size = new System.Drawing.Size(100, 20);

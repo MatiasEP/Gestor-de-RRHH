@@ -377,6 +377,7 @@
             this.txtNombre.PromptChar = ' ';
             this.txtNombre.Size = new System.Drawing.Size(180, 26);
             this.txtNombre.TabIndex = 106;
+            this.txtNombre.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtNombre_MaskInputRejected);
             // 
             // txtApellido
             // 
