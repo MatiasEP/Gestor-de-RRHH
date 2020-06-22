@@ -47,12 +47,13 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(583, 400);
+            this.btnVolver.Location = new System.Drawing.Point(652, 400);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(100, 43);
             this.btnVolver.TabIndex = 15;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnProponerPostulante
             // 
@@ -187,6 +188,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "VerPostulantes";
             this.Text = "VerPostulantes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VerPostulantes_FormClosed);
             this.Load += new System.EventHandler(this.VerPostulantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerPostulantes)).EndInit();
             this.panel1.ResumeLayout(false);

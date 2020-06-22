@@ -44,5 +44,17 @@ namespace gestor_de_recursos_humanos
 
             dgrVerPostulantes.DataSource = new Postulante().VerPostulantes(numeroBusqueda);
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            controlVista.VerBusquedas.Show();
+            controlVista.VerPostulantes.Hide();
+        }
+
+        private void VerPostulantes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ControlVista.VerBusquedas.Show();
+            ControlVista.VerPostulantes.Hide();
+        }
     }
-}
+   }

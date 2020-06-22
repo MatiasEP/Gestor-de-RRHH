@@ -51,5 +51,11 @@ namespace gestor_de_recursos_humanos
             this.Hide();
             ControlVista.VerPostulantes.Show();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            ControlVista.VerBusquedas.Hide();
+            ControlVista.Menu.Show();
+        }
     }
 }

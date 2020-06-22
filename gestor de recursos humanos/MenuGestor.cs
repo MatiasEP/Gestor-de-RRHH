@@ -46,6 +46,7 @@ namespace gestor_de_recursos_humanos
             ControlVista.VerNecesidad.ControlVista = ControlVista;
             ControlVista.Menu.Hide();
             ControlVista.VerNecesidad.Show();
+            ControlVista.VerNecesidad.checkBtn();
         }
 
         private void btn_new_find_resource_Click(object sender, EventArgs e)
@@ -102,40 +103,25 @@ namespace gestor_de_recursos_humanos
              * */
 
             hideBtn();
-            if (isGerente() | isRh() | isEmpleado() ) btn_show_org.Enabled = true;
-            if (isGerente()                         ) btn_new_nesec.Enabled = true;
-            if (isGerente() | isRh()                ) btn_show_nesec.Enabled = true;
-            if (              isRh()                ) btn_new_find_resource.Enabled = true;
-            if (isGerente() | isRh()                ) btn_show_find_resouce.Enabled = true;
-            if (              isRh()                ) btn_regist_empl.Enabled = true;
-            if (              isRh()                ) btn_show_empl.Enabled = true;
+            if (controlVista.isGerente() | controlVista.isRh() | controlVista.isEmpleado() ) btn_show_org.Enabled = true;
+            if (controlVista.isGerente()                                                   ) btn_new_nesec.Enabled = true;
+            if (controlVista.isGerente() | controlVista.isRh()                             ) btn_show_nesec.Enabled = true;
+            //   if (               controlVista.isRh()                                    ) btn_new_find_resource.Enabled = true;
+            if (controlVista.isGerente() | controlVista.isRh()                             ) btn_show_find_resouce.Enabled = true;
+            if (                           controlVista.isRh()                             ) btn_regist_empl.Enabled = true;
+            if (                           controlVista.isRh()                             ) btn_show_empl.Enabled = true;
 
 
 
         }
 
-        private bool isEmpleado()
-        {
-            return controlVista.Personal.Cargo.ID.Equals(CARGO_EMPLEADO);
-        }
 
-        private bool isRh()
-        {
-            return controlVista.Personal.Cargo.ID.Equals(CARGO_RH);
-        }
-
-        private bool isGerente()
-        {
-            return controlVista.Personal.Cargo.ID.Equals(CARGO_GERENTE);
-        }
 
         private void hideBtn()
         {
             btn_show_org.Enabled = false;
             btn_new_nesec.Enabled = false;
             btn_show_nesec.Enabled = false;
-            btn_new_find_resource.Enabled = false;
-            btn_show_find_resouce.Enabled = false;
             btn_regist_empl.Enabled = false;
             btn_show_empl.Enabled = false;
 

@@ -13,6 +13,9 @@ namespace gestor_de_recursos_humanos
     public partial class VerPropuestos : Form
     {
         public int necesidad;
+
+        internal ControlVista ControlVista { get; set; }
+
         public VerPropuestos()
         {
             InitializeComponent();
@@ -20,6 +23,7 @@ namespace gestor_de_recursos_humanos
 
         private void VerPropuestos_Load(object sender, EventArgs e)
         {
+            necesidad = ControlVista.VerNecesidad.IdNecesidad;
             dgrVerPropuestos.DataSource = new Necesidad().VerPropuestosDeNecesidad(necesidad);
         }
 
@@ -48,6 +52,18 @@ namespace gestor_de_recursos_humanos
             aux.ModificarEstadoPostulante(ID, necesidad, 3);
 
             dgrVerPropuestos.DataSource = new Postulante().VerPostulantes(necesidad);
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            ControlVista.VerNecesidad.Show();
+            ControlVista.VerPropuestos.Hide();
+        }
+
+        private void VerPropuestos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ControlVista.VerNecesidad.Show();
+            ControlVista.VerPropuestos.Hide();
         }
     }
 }

@@ -25,6 +25,8 @@ namespace gestor_de_recursos_humanos
 
         private void CrearBusqueda_Load(object sender, EventArgs e)
         {
+            creador = ControlVista.Personal.ID;
+            Necesidad =  ControlVista.VerNecesidad.IdNecesidad;
             cbxOficina.DataSource = new Oficina().VerOficinas();
             cbxOficina.DisplayMember = "Descripcion";
             cbxOficina.ValueMember = "ID";
@@ -37,7 +39,7 @@ namespace gestor_de_recursos_humanos
         private void CrearBusqueda_FormClosed(object sender, FormClosedEventArgs e)
         {
             ControlVista.CrearBusqueda.Hide();
-            ControlVista.Menu.Show();
+            ControlVista.VerNecesidad.Show();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -48,12 +50,31 @@ namespace gestor_de_recursos_humanos
             }
             else
             {
-                string asunto = txtAsunto.Text;
-                string busqueda = txtBusqueda.Text;
-                int oficina = Convert.ToInt32(cbxOficina.SelectedValue);
-                new BusquedaRecurso().CrearBusqueda(Necesidad, asunto, busqueda, creador, oficina);
-                MessageBox.Show("Creado con exito");
+
+                try
+                {
+
+                    string asunto = txtAsunto.Text;
+                    string busqueda = txtBusqueda.Text;
+                    int oficina = Convert.ToInt32(cbxOficina.SelectedValue);
+                    new BusquedaRecurso().CrearBusqueda(Necesidad, asunto, busqueda, creador, oficina);
+                    MessageBox.Show("Creado con exito");
+                    ControlVista.VerNecesidad.Show();
+                    ControlVista.CrearBusqueda.Hide();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Esta busqueda ya existe");
+                }
+                
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+
+            ControlVista.VerNecesidad.Show();
+            ControlVista.CrearBusqueda.Hide();
         }
     }
 }

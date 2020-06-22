@@ -52,6 +52,7 @@
             this.btnVolver.TabIndex = 19;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnAprobar
             // 
@@ -178,6 +179,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "VerPropuestos";
             this.Text = "VerPropuestos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VerPropuestos_FormClosed);
             this.Load += new System.EventHandler(this.VerPropuestos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerPropuestos)).EndInit();
             this.panel1.ResumeLayout(false);

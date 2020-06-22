@@ -6,6 +6,10 @@ namespace gestor_de_recursos_humanos
 {
     internal class ControlVista
     {
+        public readonly int CARGO_GERENTE = 1;
+        public readonly int CARGO_RH = 2;
+        public readonly int CARGO_EMPLEADO = 3;
+
         private Personal personal;
         private Login login;
         private MenuGestor menu;
@@ -19,7 +23,8 @@ namespace gestor_de_recursos_humanos
         private CrearNecesidad crearNecesidad;
         private CrearBusqueda crearBusqueda;
         private VerPostulantes verPostulantes;
-
+        private VerPropuestos verPropuestos;
+        internal BusquedaRecurso BusquedaRecurso;
 
         public ControlVista()
         {
@@ -38,6 +43,7 @@ namespace gestor_de_recursos_humanos
         public CrearNecesidad CrearNecesidad { get => crearNecesidad; set => crearNecesidad = value; }
         public CrearBusqueda CrearBusqueda { get => crearBusqueda; set => crearBusqueda = value; }
         public VerPostulantes VerPostulantes { get => verPostulantes; set => verPostulantes = value; }
+        public VerPropuestos VerPropuestos { get => verPropuestos; set => verPropuestos = value; }
 
         internal void showMenu()
         {
@@ -91,5 +97,20 @@ namespace gestor_de_recursos_humanos
 
             return sb.ToString();
         }
-}
+
+        public bool isEmpleado()
+        {
+            return Personal.Cargo.ID.Equals(CARGO_EMPLEADO);
+        }
+
+        public bool isRh()
+        {
+            return Personal.Cargo.ID.Equals(CARGO_RH);
+        }
+
+        public bool isGerente()
+        {
+            return Personal.Cargo.ID.Equals(CARGO_GERENTE);
+        }
+    }
 }

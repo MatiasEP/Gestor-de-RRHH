@@ -31,7 +31,6 @@
             this.btn_show_org = new System.Windows.Forms.Button();
             this.btn_new_nesec = new System.Windows.Forms.Button();
             this.btn_show_nesec = new System.Windows.Forms.Button();
-            this.btn_new_find_resource = new System.Windows.Forms.Button();
             this.btn_show_find_resouce = new System.Windows.Forms.Button();
             this.btn_regist_empl = new System.Windows.Forms.Button();
             this.btn_show_empl = new System.Windows.Forms.Button();
@@ -75,21 +74,10 @@
             this.btn_show_nesec.UseVisualStyleBackColor = true;
             this.btn_show_nesec.Click += new System.EventHandler(this.btn_show_nesec_Click);
             // 
-            // btn_new_find_resource
-            // 
-            this.btn_new_find_resource.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_new_find_resource.Location = new System.Drawing.Point(650, 150);
-            this.btn_new_find_resource.Name = "btn_new_find_resource";
-            this.btn_new_find_resource.Size = new System.Drawing.Size(112, 42);
-            this.btn_new_find_resource.TabIndex = 3;
-            this.btn_new_find_resource.Text = "Crear busqueda de recurso";
-            this.btn_new_find_resource.UseVisualStyleBackColor = true;
-            this.btn_new_find_resource.Click += new System.EventHandler(this.btn_new_find_resource_Click);
-            // 
             // btn_show_find_resouce
             // 
             this.btn_show_find_resouce.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_show_find_resouce.Location = new System.Drawing.Point(650, 198);
+            this.btn_show_find_resouce.Location = new System.Drawing.Point(650, 150);
             this.btn_show_find_resouce.Name = "btn_show_find_resouce";
             this.btn_show_find_resouce.Size = new System.Drawing.Size(112, 42);
             this.btn_show_find_resouce.TabIndex = 4;
@@ -100,7 +88,7 @@
             // btn_regist_empl
             // 
             this.btn_regist_empl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_regist_empl.Location = new System.Drawing.Point(650, 246);
+            this.btn_regist_empl.Location = new System.Drawing.Point(650, 198);
             this.btn_regist_empl.Name = "btn_regist_empl";
             this.btn_regist_empl.Size = new System.Drawing.Size(112, 32);
             this.btn_regist_empl.TabIndex = 5;
@@ -111,7 +99,7 @@
             // btn_show_empl
             // 
             this.btn_show_empl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_show_empl.Location = new System.Drawing.Point(650, 284);
+            this.btn_show_empl.Location = new System.Drawing.Point(650, 236);
             this.btn_show_empl.Name = "btn_show_empl";
             this.btn_show_empl.Size = new System.Drawing.Size(112, 32);
             this.btn_show_empl.TabIndex = 6;
@@ -175,7 +163,6 @@
             this.Controls.Add(this.btn_show_empl);
             this.Controls.Add(this.btn_regist_empl);
             this.Controls.Add(this.btn_show_find_resouce);
-            this.Controls.Add(this.btn_new_find_resource);
             this.Controls.Add(this.btn_show_nesec);
             this.Controls.Add(this.btn_new_nesec);
             this.Controls.Add(this.btn_show_org);
@@ -193,7 +180,6 @@
         private System.Windows.Forms.Button btn_show_org;
         private System.Windows.Forms.Button btn_new_nesec;
         private System.Windows.Forms.Button btn_show_nesec;
-        private System.Windows.Forms.Button btn_new_find_resource;
         private System.Windows.Forms.Button btn_show_find_resouce;
         private System.Windows.Forms.Button btn_regist_empl;
         private System.Windows.Forms.Button btn_show_empl;

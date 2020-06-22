@@ -32,12 +32,13 @@
             this.btnCrearBusqueda = new System.Windows.Forms.Button();
             this.dgrVerNecesidad = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtAsunto = new System.Windows.Forms.TextBox();
+            this.lblCreador = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblCreador = new System.Windows.Forms.Label();
-            this.txtAsunto = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.btnVerPropuestos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerNecesidad)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,22 +46,24 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(583, 400);
+            this.btnVolver.Location = new System.Drawing.Point(665, 400);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(100, 43);
             this.btnVolver.TabIndex = 7;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnCrearBusqueda
             // 
             this.btnCrearBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearBusqueda.Location = new System.Drawing.Point(397, 400);
+            this.btnCrearBusqueda.Location = new System.Drawing.Point(459, 400);
             this.btnCrearBusqueda.Name = "btnCrearBusqueda";
             this.btnCrearBusqueda.Size = new System.Drawing.Size(97, 43);
             this.btnCrearBusqueda.TabIndex = 6;
             this.btnCrearBusqueda.Text = "Crear busqueda";
             this.btnCrearBusqueda.UseVisualStyleBackColor = true;
+            this.btnCrearBusqueda.Click += new System.EventHandler(this.btnCrearBusqueda_Click);
             // 
             // dgrVerNecesidad
             // 
@@ -99,6 +102,35 @@
             this.panel1.Size = new System.Drawing.Size(288, 452);
             this.panel1.TabIndex = 4;
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Enabled = false;
+            this.txtDescripcion.Location = new System.Drawing.Point(16, 96);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
+            this.txtDescripcion.Size = new System.Drawing.Size(256, 312);
+            this.txtDescripcion.TabIndex = 18;
+            // 
+            // txtAsunto
+            // 
+            this.txtAsunto.Enabled = false;
+            this.txtAsunto.Location = new System.Drawing.Point(16, 23);
+            this.txtAsunto.Multiline = true;
+            this.txtAsunto.Name = "txtAsunto";
+            this.txtAsunto.ReadOnly = true;
+            this.txtAsunto.Size = new System.Drawing.Size(256, 54);
+            this.txtAsunto.TabIndex = 8;
+            // 
+            // lblCreador
+            // 
+            this.lblCreador.AutoSize = true;
+            this.lblCreador.Location = new System.Drawing.Point(90, 424);
+            this.lblCreador.Name = "lblCreador";
+            this.lblCreador.Size = new System.Drawing.Size(121, 13);
+            this.lblCreador.TabIndex = 8;
+            this.lblCreador.Text = "___________________";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -126,40 +158,23 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Asunto: ";
             // 
-            // lblCreador
+            // btnVerPropuestos
             // 
-            this.lblCreador.AutoSize = true;
-            this.lblCreador.Location = new System.Drawing.Point(90, 424);
-            this.lblCreador.Name = "lblCreador";
-            this.lblCreador.Size = new System.Drawing.Size(121, 13);
-            this.lblCreador.TabIndex = 8;
-            this.lblCreador.Text = "___________________";
-            // 
-            // txtAsunto
-            // 
-            this.txtAsunto.Enabled = false;
-            this.txtAsunto.Location = new System.Drawing.Point(16, 23);
-            this.txtAsunto.Multiline = true;
-            this.txtAsunto.Name = "txtAsunto";
-            this.txtAsunto.ReadOnly = true;
-            this.txtAsunto.Size = new System.Drawing.Size(256, 54);
-            this.txtAsunto.TabIndex = 8;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Enabled = false;
-            this.txtDescripcion.Location = new System.Drawing.Point(16, 96);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(256, 312);
-            this.txtDescripcion.TabIndex = 18;
+            this.btnVerPropuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnVerPropuestos.Location = new System.Drawing.Point(562, 400);
+            this.btnVerPropuestos.Name = "btnVerPropuestos";
+            this.btnVerPropuestos.Size = new System.Drawing.Size(97, 43);
+            this.btnVerPropuestos.TabIndex = 8;
+            this.btnVerPropuestos.Text = "Ver propuestos";
+            this.btnVerPropuestos.UseVisualStyleBackColor = true;
+            this.btnVerPropuestos.Click += new System.EventHandler(this.btnVerPropuestos_Click);
             // 
             // VerNecesidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVerPropuestos);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnCrearBusqueda);
             this.Controls.Add(this.dgrVerNecesidad);
@@ -187,5 +202,6 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtAsunto;
         private System.Windows.Forms.Label lblCreador;
+        private System.Windows.Forms.Button btnVerPropuestos;
     }
 }
