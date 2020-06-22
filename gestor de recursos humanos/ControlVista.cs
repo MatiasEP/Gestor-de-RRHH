@@ -80,7 +80,7 @@ namespace gestor_de_recursos_humanos
             Organigrama.ControlVista = this;
             Organigrama.ID = Personal.ID;
             Organigrama.Show();
-            Organigrama.Hide();
+            Menu.Hide();
             Organigrama.Location = login.Location;
         }
 

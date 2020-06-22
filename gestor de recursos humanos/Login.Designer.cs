@@ -50,6 +50,7 @@
             // txtContrasena
             // 
             this.txtContrasena.Location = new System.Drawing.Point(395, 214);
+            this.txtContrasena.MaxLength = 60;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(100, 20);
