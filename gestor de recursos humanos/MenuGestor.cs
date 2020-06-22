@@ -91,7 +91,7 @@ namespace gestor_de_recursos_humanos
             if (controlVista.isGerente()                                                   ) btn_new_nesec.Enabled = true;
             if (controlVista.isGerente() | controlVista.isRh()                             ) btn_show_nesec.Enabled = true;
             //   if (               controlVista.isRh()                                    ) btn_new_find_resource.Enabled = true;
-            if (controlVista.isGerente() | controlVista.isRh()                             ) btn_show_find_resouce.Enabled = true;
+            if (                           controlVista.isRh()                             ) btn_show_find_resouce.Enabled = true;
             if (                           controlVista.isRh()                             ) btn_regist_empl.Enabled = true;
             if (                           controlVista.isRh()                             ) btn_show_empl.Enabled = true;
 
