@@ -25,6 +25,8 @@ namespace gestor_de_recursos_humanos
 
         private void CrearBusqueda_Load(object sender, EventArgs e)
         {
+            creador = ControlVista.Personal.ID;
+            Necesidad =  ControlVista.VerNecesidad.IdNecesidad;
             cbxOficina.DataSource = new Oficina().VerOficinas();
             cbxOficina.DisplayMember = "Descripcion";
             cbxOficina.ValueMember = "ID";
@@ -37,36 +39,42 @@ namespace gestor_de_recursos_humanos
         private void CrearBusqueda_FormClosed(object sender, FormClosedEventArgs e)
         {
             ControlVista.CrearBusqueda.Hide();
-            ControlVista.Menu.Show();
+            ControlVista.VerNecesidad.Show();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            try
+            if (txtAsunto.Text == "" || txtBusqueda.Text == "")
             {
-                if (txtAsunto.Text == "" || txtBusqueda.Text == "")
+                MessageBox.Show("No se permiten campos vacios");
+            }
+            else
+            {
+
+                try
                 {
-                    MessageBox.Show("No se permiten campos vacios");
-                }
-                else
-                {
+
                     string asunto = txtAsunto.Text;
                     string busqueda = txtBusqueda.Text;
                     int oficina = Convert.ToInt32(cbxOficina.SelectedValue);
                     new BusquedaRecurso().CrearBusqueda(Necesidad, asunto, busqueda, creador, oficina);
                     MessageBox.Show("Creado con exito");
+                    ControlVista.VerNecesidad.Show();
+                    ControlVista.CrearBusqueda.Hide();
                 }
-            }
-            catch (Exception)
-            {
+                catch (Exception ex)
+                {
                 MessageBox.Show("La necesidad ya posee una busqueda asociada");
+                }
+                
             }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            controlVista.VerNecesidad.Show();
+
+            ControlVista.VerNecesidad.Show();
+            ControlVista.CrearBusqueda.Hide();
         }
     }
 }

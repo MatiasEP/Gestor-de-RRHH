@@ -18,6 +18,7 @@ public class CrearBusqueda
         SqlParameter pBusqueda = cBusqueda.crearParametro("@Busqueda", Busqueda);
         SqlParameter pCreador = cBusqueda.crearParametro("@Creador", Creador);
         SqlParameter pOficina = cBusqueda.crearParametro("@Oficina", Oficina);
+
         parametros[0] = pID;
         parametros[1] = pAsunto;
         parametros[2] = pBusqueda;

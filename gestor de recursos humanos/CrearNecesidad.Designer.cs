@@ -34,6 +34,7 @@
             this.txtNecesidad = new System.Windows.Forms.TextBox();
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.Line = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -70,15 +71,15 @@
             this.txtNecesidad.Location = new System.Drawing.Point(45, 110);
             this.txtNecesidad.Multiline = true;
             this.txtNecesidad.Name = "txtNecesidad";
-            this.txtNecesidad.Size = new System.Drawing.Size(687, 275);
+            this.txtNecesidad.Size = new System.Drawing.Size(687, 323);
             this.txtNecesidad.TabIndex = 3;
             // 
             // btnCrear
             // 
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(203, 406);
+            this.btnCrear.Location = new System.Drawing.Point(522, 451);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(82, 32);
+            this.btnCrear.Size = new System.Drawing.Size(130, 33);
             this.btnCrear.TabIndex = 4;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
@@ -87,18 +88,28 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(520, 406);
+            this.btnVolver.Location = new System.Drawing.Point(658, 451);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(86, 32);
+            this.btnVolver.Size = new System.Drawing.Size(130, 33);
             this.btnVolver.TabIndex = 5;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // Line
+            // 
+            this.Line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Line.Location = new System.Drawing.Point(18, 446);
+            this.Line.Name = "Line";
+            this.Line.Size = new System.Drawing.Size(770, 2);
+            this.Line.TabIndex = 15;
             // 
             // CrearNecesidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.Line);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.txtNecesidad);
@@ -122,5 +133,6 @@
         private System.Windows.Forms.TextBox txtNecesidad;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label Line;
     }
 }

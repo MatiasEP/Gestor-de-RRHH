@@ -31,15 +31,11 @@
             this.btn_show_org = new System.Windows.Forms.Button();
             this.btn_new_nesec = new System.Windows.Forms.Button();
             this.btn_show_nesec = new System.Windows.Forms.Button();
-            this.btn_new_find_resource = new System.Windows.Forms.Button();
             this.btn_show_find_resouce = new System.Windows.Forms.Button();
             this.btn_regist_empl = new System.Windows.Forms.Button();
             this.btn_show_empl = new System.Windows.Forms.Button();
             this.btn_sign_out = new System.Windows.Forms.Button();
-            this.LUsuario = new System.Windows.Forms.Label();
-            this.LCargo = new System.Windows.Forms.Label();
-            this.legajoActual = new System.Windows.Forms.TextBox();
-            this.cargoActual = new System.Windows.Forms.TextBox();
+            this.Line = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_show_org
@@ -75,21 +71,10 @@
             this.btn_show_nesec.UseVisualStyleBackColor = true;
             this.btn_show_nesec.Click += new System.EventHandler(this.btn_show_nesec_Click);
             // 
-            // btn_new_find_resource
-            // 
-            this.btn_new_find_resource.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_new_find_resource.Location = new System.Drawing.Point(650, 150);
-            this.btn_new_find_resource.Name = "btn_new_find_resource";
-            this.btn_new_find_resource.Size = new System.Drawing.Size(112, 42);
-            this.btn_new_find_resource.TabIndex = 3;
-            this.btn_new_find_resource.Text = "Crear busqueda de recurso";
-            this.btn_new_find_resource.UseVisualStyleBackColor = true;
-            this.btn_new_find_resource.Click += new System.EventHandler(this.btn_new_find_resource_Click);
-            // 
             // btn_show_find_resouce
             // 
             this.btn_show_find_resouce.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_show_find_resouce.Location = new System.Drawing.Point(650, 198);
+            this.btn_show_find_resouce.Location = new System.Drawing.Point(650, 150);
             this.btn_show_find_resouce.Name = "btn_show_find_resouce";
             this.btn_show_find_resouce.Size = new System.Drawing.Size(112, 42);
             this.btn_show_find_resouce.TabIndex = 4;
@@ -100,7 +85,7 @@
             // btn_regist_empl
             // 
             this.btn_regist_empl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_regist_empl.Location = new System.Drawing.Point(650, 246);
+            this.btn_regist_empl.Location = new System.Drawing.Point(650, 198);
             this.btn_regist_empl.Name = "btn_regist_empl";
             this.btn_regist_empl.Size = new System.Drawing.Size(112, 32);
             this.btn_regist_empl.TabIndex = 5;
@@ -111,7 +96,7 @@
             // btn_show_empl
             // 
             this.btn_show_empl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_show_empl.Location = new System.Drawing.Point(650, 284);
+            this.btn_show_empl.Location = new System.Drawing.Point(650, 236);
             this.btn_show_empl.Name = "btn_show_empl";
             this.btn_show_empl.Size = new System.Drawing.Size(112, 32);
             this.btn_show_empl.TabIndex = 6;
@@ -122,7 +107,7 @@
             // btn_sign_out
             // 
             this.btn_sign_out.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_sign_out.Location = new System.Drawing.Point(650, 380);
+            this.btn_sign_out.Location = new System.Drawing.Point(650, 451);
             this.btn_sign_out.Name = "btn_sign_out";
             this.btn_sign_out.Size = new System.Drawing.Size(112, 32);
             this.btn_sign_out.TabIndex = 7;
@@ -130,52 +115,24 @@
             this.btn_sign_out.UseVisualStyleBackColor = true;
             this.btn_sign_out.Click += new System.EventHandler(this.btn_sign_out_Click);
             // 
-            // LUsuario
+            // Line
             // 
-            this.LUsuario.AutoSize = true;
-            this.LUsuario.Location = new System.Drawing.Point(15, 12);
-            this.LUsuario.Name = "LUsuario";
-            this.LUsuario.Size = new System.Drawing.Size(39, 13);
-            this.LUsuario.TabIndex = 9;
-            this.LUsuario.Text = "Legajo";
-            // 
-            // LCargo
-            // 
-            this.LCargo.AutoSize = true;
-            this.LCargo.Location = new System.Drawing.Point(15, 32);
-            this.LCargo.Name = "LCargo";
-            this.LCargo.Size = new System.Drawing.Size(41, 13);
-            this.LCargo.TabIndex = 10;
-            this.LCargo.Text = "Cargo :";
-            // 
-            // legajoActual
-            // 
-            this.legajoActual.Location = new System.Drawing.Point(61, 9);
-            this.legajoActual.Name = "legajoActual";
-            this.legajoActual.Size = new System.Drawing.Size(100, 20);
-            this.legajoActual.TabIndex = 11;
-            // 
-            // cargoActual
-            // 
-            this.cargoActual.Location = new System.Drawing.Point(61, 29);
-            this.cargoActual.Name = "cargoActual";
-            this.cargoActual.Size = new System.Drawing.Size(100, 20);
-            this.cargoActual.TabIndex = 12;
+            this.Line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Line.Location = new System.Drawing.Point(18, 446);
+            this.Line.Name = "Line";
+            this.Line.Size = new System.Drawing.Size(770, 2);
+            this.Line.TabIndex = 13;
             // 
             // MenuGestor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cargoActual);
-            this.Controls.Add(this.legajoActual);
-            this.Controls.Add(this.LCargo);
-            this.Controls.Add(this.LUsuario);
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.Line);
             this.Controls.Add(this.btn_sign_out);
             this.Controls.Add(this.btn_show_empl);
             this.Controls.Add(this.btn_regist_empl);
             this.Controls.Add(this.btn_show_find_resouce);
-            this.Controls.Add(this.btn_new_find_resource);
             this.Controls.Add(this.btn_show_nesec);
             this.Controls.Add(this.btn_new_nesec);
             this.Controls.Add(this.btn_show_org);
@@ -184,7 +141,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuGestor_FormClosed);
             this.Load += new System.EventHandler(this.MenuGestor_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -193,14 +149,10 @@
         private System.Windows.Forms.Button btn_show_org;
         private System.Windows.Forms.Button btn_new_nesec;
         private System.Windows.Forms.Button btn_show_nesec;
-        private System.Windows.Forms.Button btn_new_find_resource;
         private System.Windows.Forms.Button btn_show_find_resouce;
         private System.Windows.Forms.Button btn_regist_empl;
         private System.Windows.Forms.Button btn_show_empl;
         private System.Windows.Forms.Button btn_sign_out;
-        private System.Windows.Forms.Label LUsuario;
-        private System.Windows.Forms.Label LCargo;
-        private System.Windows.Forms.TextBox legajoActual;
-        private System.Windows.Forms.TextBox cargoActual;
+        private System.Windows.Forms.Label Line;
     }
 }

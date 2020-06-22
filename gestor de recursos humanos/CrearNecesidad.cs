@@ -27,8 +27,8 @@ namespace gestor_de_recursos_humanos
 
         private void CrearNecesidad_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ControlVista.CrearNecesidad.Hide();
             ControlVista.Menu.Show();
+            ControlVista.CrearNecesidad.Hide();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -39,11 +39,26 @@ namespace gestor_de_recursos_humanos
             }
             else
             {
-                string asunto = txtAsunto.Text;
-                string necesidad = txtNecesidad.Text;
-                new Necesidad().CrearNecesidad(asunto, necesidad, ControlVista.Personal.ID);
-                MessageBox.Show("Creado con exito");
+                try
+                {
+
+                    string asunto = txtAsunto.Text;
+                    string necesidad = txtNecesidad.Text;
+                    new Necesidad().CrearNecesidad(asunto, necesidad, ControlVista.Personal.ID);
+                    MessageBox.Show("Creado con exito");
+                    ControlVista.Menu.Show();
+                    ControlVista.CrearNecesidad.Hide();
+                }
+                catch (Exception ex) {
+                    MessageBox.Show("Ocurrio un error - consulte en RH");
+                }
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            ControlVista.Menu.Show();
+            ControlVista.CrearNecesidad.Hide();
         }
     }
 }

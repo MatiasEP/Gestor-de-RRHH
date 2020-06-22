@@ -68,6 +68,8 @@
             this.dgrVerPersonal = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.Line = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerPersonal)).BeginInit();
             this.SuspendLayout();
@@ -113,7 +115,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 452);
+            this.panel1.Size = new System.Drawing.Size(288, 450);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -453,13 +455,13 @@
             this.dgrVerPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgrVerPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrVerPersonal.GridColor = System.Drawing.SystemColors.Control;
-            this.dgrVerPersonal.Location = new System.Drawing.Point(287, -1);
+            this.dgrVerPersonal.Location = new System.Drawing.Point(287, 2);
             this.dgrVerPersonal.Name = "dgrVerPersonal";
             this.dgrVerPersonal.ReadOnly = true;
             this.dgrVerPersonal.RowTemplate.ReadOnly = true;
             this.dgrVerPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrVerPersonal.ShowEditingIcon = false;
-            this.dgrVerPersonal.Size = new System.Drawing.Size(513, 394);
+            this.dgrVerPersonal.Size = new System.Drawing.Size(513, 408);
             this.dgrVerPersonal.TabIndex = 1;
             this.dgrVerPersonal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrVerPersonal_CellContentClick);
             this.dgrVerPersonal.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrVerPersonal_CellEnter);
@@ -467,9 +469,9 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(396, 404);
+            this.btnModificar.Location = new System.Drawing.Point(520, 411);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(97, 38);
+            this.btnModificar.Size = new System.Drawing.Size(130, 33);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -478,19 +480,40 @@
             // btnBorrar
             // 
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(582, 404);
+            this.btnBorrar.Location = new System.Drawing.Point(656, 411);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(100, 38);
+            this.btnBorrar.Size = new System.Drawing.Size(130, 33);
             this.btnBorrar.TabIndex = 3;
             this.btnBorrar.Text = "Desvincular";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(657, 450);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(130, 33);
+            this.btnVolver.TabIndex = 20;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // Line
+            // 
+            this.Line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Line.Location = new System.Drawing.Point(16, 446);
+            this.Line.Name = "Line";
+            this.Line.Size = new System.Drawing.Size(770, 2);
+            this.Line.TabIndex = 22;
+            // 
             // VerPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.Line);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dgrVerPersonal);
@@ -548,5 +571,7 @@
         private System.Windows.Forms.DataGridView dgrVerPersonal;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label Line;
     }
 }

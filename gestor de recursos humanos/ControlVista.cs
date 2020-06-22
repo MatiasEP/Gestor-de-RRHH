@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -6,6 +7,26 @@ namespace gestor_de_recursos_humanos
 {
     internal class ControlVista
     {
+        public readonly int CARGO_GERENTE = 1;
+        public readonly int CARGO_RH = 2;
+        public readonly int CARGO_EMPLEADO = 3;
+        private readonly string SESSIONINICIADA = "Sesión iniciada - ";
+        private readonly string VISUALIZARPERSONAL = "Visualizar personal - ";
+        private readonly string REGISTRARPERSONAL = "Registrar personal - ";
+        private readonly string MODIFICARPERSONAL = "Modificar personal - ";
+        private readonly string CREARNECESIDAD = "Crear Necesidad - ";
+        private readonly string CREAREMPLEADO = "Crear Empleado - ";
+        private readonly string VISUALIZARNECESIDAD = "Visualizar Necesidad - ";
+
+
+
+        private readonly string CREARBUSQUEDA = "Crear busqueda - ";
+        private readonly string VISUALIZARBUSQUEDA = "Visualizar busqueda - ";
+
+
+        private readonly string VISUALIZARPOSTULANTE = "Visualizar postulante - ";
+        private readonly string CREARPOSTULANTE = "Crear postulante - ";
+
         private Personal personal;
         private Login login;
         private MenuGestor menu;
@@ -17,9 +38,13 @@ namespace gestor_de_recursos_humanos
         private VerNecesidad verNecesidad;
         private VerBusquedas verBusquedas;
         private CrearNecesidad crearNecesidad;
+
+
+
         private CrearBusqueda crearBusqueda;
         private VerPostulantes verPostulantes;
         private VerPropuestos verPropuestos;
+        internal BusquedaRecurso BusquedaRecurso;
 
 
         public ControlVista()
@@ -45,36 +70,91 @@ namespace gestor_de_recursos_humanos
         {
             menu = new MenuGestor();
             menu.ControlVista = this;
-            menu.verDatos();
+            menu.Text = SESSIONINICIADA+ cargoText();
             menu.Show();
+            menu.Location = login.Location;
         }
+        internal void ShowOrganigrama()
+        {
+            Organigrama = new Organigrama();
+            Organigrama.ControlVista = this;
+            Organigrama.ID = Personal.ID;
+            Organigrama.Show();
+            Organigrama.Hide();
+            Organigrama.Location = login.Location;
+        }
+
+        internal void showCrearNecesidad()
+        {
+            CrearNecesidad = new CrearNecesidad();
+            CrearNecesidad.ControlVista = this;
+            CrearNecesidad.Text = CREARNECESIDAD + cargoText();
+            CrearNecesidad.Show();
+            Menu.Hide();
+            crearNecesidad.Location = login.Location;
+        }
+        internal void showVerBusquedas()
+        {
+            VerBusquedas = new VerBusquedas();
+            VerBusquedas.ControlVista = this;
+            VerBusquedas.Text = VISUALIZARBUSQUEDA + cargoText();
+            VerBusquedas.Show();
+            Menu.Hide();
+            VerBusquedas.Location = login.Location;
+        }
+        internal void showVerNecesidad()
+        {
+            VerNecesidad = new VerNecesidad();
+            VerNecesidad.ControlVista = this;
+            VerNecesidad.Show();
+            Menu.Hide();
+            VerNecesidad.Text = VISUALIZARNECESIDAD + cargoText();
+            VerNecesidad.checkBtn();
+            VerNecesidad.Location = login.Location;
+        }
+
+        private string cargoText()
+        {
+            if (isRh()) { return "RRHH"; }
+            if (isGerente()) { return "Gerente"; }
+            if (isEmpleado()) { return "Empleado"; }
+
+            return "";
+        }
+
         internal void showActualizarPassword()
         {
             actualizarPassword = new ActualizarPassword();
             actualizarPassword.ControlVista = this;
             actualizarPassword.Show();
+            actualizarPassword.Location = login.Location;
         }
 
         public void showLogin()
         {
-            menu.Hide();
             login.Show();
+            menu.Hide();
+
         }
 
         internal void showAlta()
         {
-            menu.Hide();
             alta = new AltaPersonal();
             alta.ControlVista = this;
+            alta.Text = CREAREMPLEADO + cargoText();
             alta.Show();
+            menu.Hide();
+            alta.Location = login.Location;
         }
 
         internal void showVerEmpleado()
         {
-            menu.Hide();
             verPersonal = new VerPersonal();
+            verPersonal.Text = VISUALIZARPERSONAL + cargoText();
             verPersonal.ControlVista = this;
             verPersonal.Show();
+            menu.Hide();
+            VerPersonal.Location = login.Location;
         }
 
       
@@ -93,5 +173,20 @@ namespace gestor_de_recursos_humanos
 
             return sb.ToString();
         }
-}
+
+        public bool isEmpleado()
+        {
+            return Personal.Cargo.ID.Equals(CARGO_EMPLEADO);
+        }
+
+        public bool isRh()
+        {
+            return Personal.Cargo.ID.Equals(CARGO_RH);
+        }
+
+        public bool isGerente()
+        {
+            return Personal.Cargo.ID.Equals(CARGO_GERENTE);
+        }
+    }
 }

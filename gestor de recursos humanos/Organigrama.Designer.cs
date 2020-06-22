@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblSupervisor = new System.Windows.Forms.Label();
             this.lblSupervisados = new System.Windows.Forms.Label();
+            this.Line = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrSupervisor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrSupervisados)).BeginInit();
             this.SuspendLayout();
@@ -104,9 +105,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(358, 411);
+            this.button1.Location = new System.Drawing.Point(658, 451);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 27);
+            this.button1.Size = new System.Drawing.Size(130, 33);
             this.button1.TabIndex = 18;
             this.button1.Text = "Volver";
             this.button1.UseVisualStyleBackColor = true;
@@ -134,11 +135,20 @@
             this.lblSupervisados.Text = "No supervisa a nadie";
             this.lblSupervisados.Visible = false;
             // 
+            // Line
+            // 
+            this.Line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Line.Location = new System.Drawing.Point(18, 446);
+            this.Line.Name = "Line";
+            this.Line.Size = new System.Drawing.Size(770, 2);
+            this.Line.TabIndex = 23;
+            // 
             // Organigrama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.Line);
             this.Controls.Add(this.lblSupervisados);
             this.Controls.Add(this.lblSupervisor);
             this.Controls.Add(this.button1);
@@ -166,5 +176,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblSupervisor;
         private System.Windows.Forms.Label lblSupervisados;
+        private System.Windows.Forms.Label Line;
     }
 }

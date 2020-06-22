@@ -39,6 +39,7 @@
             this.txtCurriculum = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRechazar = new System.Windows.Forms.Button();
+            this.Line = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerPropuestos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,19 +47,20 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(662, 400);
+            this.btnVolver.Location = new System.Drawing.Point(658, 450);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(100, 43);
+            this.btnVolver.Size = new System.Drawing.Size(130, 33);
             this.btnVolver.TabIndex = 19;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnAprobar
             // 
             this.btnAprobar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAprobar.Location = new System.Drawing.Point(361, 400);
+            this.btnAprobar.Location = new System.Drawing.Point(522, 411);
             this.btnAprobar.Name = "btnAprobar";
-            this.btnAprobar.Size = new System.Drawing.Size(97, 43);
+            this.btnAprobar.Size = new System.Drawing.Size(130, 33);
             this.btnAprobar.TabIndex = 18;
             this.btnAprobar.Text = "Aprobar";
             this.btnAprobar.UseVisualStyleBackColor = true;
@@ -82,7 +84,7 @@
             this.dgrVerPropuestos.RowTemplate.ReadOnly = true;
             this.dgrVerPropuestos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrVerPropuestos.ShowEditingIcon = false;
-            this.dgrVerPropuestos.Size = new System.Drawing.Size(513, 394);
+            this.dgrVerPropuestos.Size = new System.Drawing.Size(513, 405);
             this.dgrVerPropuestos.TabIndex = 17;
             this.dgrVerPropuestos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrVerPropuestos_CellEnter);
             // 
@@ -97,7 +99,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 452);
+            this.panel1.Size = new System.Drawing.Size(288, 450);
             this.panel1.TabIndex = 16;
             // 
             // lblNombre
@@ -143,7 +145,7 @@
             this.txtCurriculum.Multiline = true;
             this.txtCurriculum.Name = "txtCurriculum";
             this.txtCurriculum.ReadOnly = true;
-            this.txtCurriculum.Size = new System.Drawing.Size(256, 343);
+            this.txtCurriculum.Size = new System.Drawing.Size(256, 340);
             this.txtCurriculum.TabIndex = 18;
             // 
             // label2
@@ -158,19 +160,28 @@
             // btnRechazar
             // 
             this.btnRechazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRechazar.Location = new System.Drawing.Point(511, 400);
+            this.btnRechazar.Location = new System.Drawing.Point(658, 411);
             this.btnRechazar.Name = "btnRechazar";
-            this.btnRechazar.Size = new System.Drawing.Size(97, 43);
+            this.btnRechazar.Size = new System.Drawing.Size(130, 33);
             this.btnRechazar.TabIndex = 20;
             this.btnRechazar.Text = "Rechazar";
             this.btnRechazar.UseVisualStyleBackColor = true;
             this.btnRechazar.Click += new System.EventHandler(this.btnRechazar_Click);
             // 
+            // Line
+            // 
+            this.Line.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Line.Location = new System.Drawing.Point(18, 447);
+            this.Line.Name = "Line";
+            this.Line.Size = new System.Drawing.Size(770, 2);
+            this.Line.TabIndex = 21;
+            // 
             // VerPropuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.Line);
             this.Controls.Add(this.btnRechazar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnAprobar);
@@ -178,6 +189,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "VerPropuestos";
             this.Text = "VerPropuestos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VerPropuestos_FormClosed);
             this.Load += new System.EventHandler(this.VerPropuestos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgrVerPropuestos)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -199,5 +211,6 @@
         private System.Windows.Forms.TextBox txtCurriculum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRechazar;
+        private System.Windows.Forms.Label Line;
     }
 }

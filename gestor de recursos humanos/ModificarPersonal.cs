@@ -159,5 +159,11 @@ namespace gestor_de_recursos_humanos
             ControlVista.Modificar.Hide();
             ControlVista.VerPersonal.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            controlVista.VerPersonal.Show();
+            controlVista.Modificar.Hide();
+        }
     }
 }

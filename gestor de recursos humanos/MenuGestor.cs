@@ -26,27 +26,19 @@ namespace gestor_de_recursos_humanos
 
         private void btn_show_org_Click(object sender, EventArgs e)
         {
-            ControlVista.Organigrama = new Organigrama();
-            ControlVista.Organigrama.ControlVista = ControlVista;
-            ControlVista.Organigrama.ID = ControlVista.Personal.ID;
-            ControlVista.Menu.Hide();
-            ControlVista.Organigrama.Show();
+            ControlVista.ShowOrganigrama();
+
         }
 
         private void btn_new_nesec_Click(object sender, EventArgs e)
         {
-            ControlVista.CrearNecesidad = new CrearNecesidad();
-            ControlVista.CrearNecesidad.ControlVista = ControlVista;
-            ControlVista.Menu.Hide();
-            ControlVista.CrearNecesidad.Show();
+            ControlVista.showCrearNecesidad();
         }
 
         private void btn_show_nesec_Click(object sender, EventArgs e)
         {
-            ControlVista.VerNecesidad = new VerNecesidad();
-            ControlVista.VerNecesidad.ControlVista = ControlVista;
-            ControlVista.Menu.Hide();
-            ControlVista.VerNecesidad.Show();
+            
+            ControlVista.showVerNecesidad();
         }
 
         private void btn_new_find_resource_Click(object sender, EventArgs e)
@@ -60,17 +52,9 @@ namespace gestor_de_recursos_humanos
 
         private void btn_show_find_resouce_Click(object sender, EventArgs e)
         {
-            ControlVista.VerBusquedas = new VerBusquedas();
-            ControlVista.VerBusquedas.ControlVista = ControlVista;
-            ControlVista.Menu.Hide();
-            ControlVista.VerBusquedas.Show();
+            ControlVista.showVerBusquedas();
         }
 
-        internal void verDatos()
-        {
-            legajoActual.Text = controlVista.Personal.Legajo.ToString();
-            cargoActual.Text = controlVista.Personal.Cargo.Descripcion;
-        }
 
         private void btn_regist_empl_Click(object sender, EventArgs e)
         {
@@ -103,42 +87,28 @@ namespace gestor_de_recursos_humanos
              * */
 
             hideBtn();
-            if (isGerente() | isRh() | isEmpleado() ) btn_show_org.Enabled = true;
-            if (isGerente()                         ) btn_new_nesec.Enabled = true;
-            if (isGerente() | isRh()                ) btn_show_nesec.Enabled = true;
-            if (              isRh()                ) btn_new_find_resource.Enabled = true;
-            if (isGerente() | isRh()                ) btn_show_find_resouce.Enabled = true;
-            if (              isRh()                ) btn_regist_empl.Enabled = true;
-            if (              isRh()                ) btn_show_empl.Enabled = true;
+            if (controlVista.isGerente() | controlVista.isRh() | controlVista.isEmpleado() ) btn_show_org.Enabled = true;
+            if (controlVista.isGerente()                                                   ) btn_new_nesec.Enabled = true;
+            if (controlVista.isGerente() | controlVista.isRh()                             ) btn_show_nesec.Enabled = true;
+            //   if (               controlVista.isRh()                                    ) btn_new_find_resource.Enabled = true;
+            if (controlVista.isGerente() | controlVista.isRh()                             ) btn_show_find_resouce.Enabled = true;
+            if (                           controlVista.isRh()                             ) btn_regist_empl.Enabled = true;
+            if (                           controlVista.isRh()                             ) btn_show_empl.Enabled = true;
 
 
 
         }
 
-        private bool isEmpleado()
-        {
-            return controlVista.Personal.Cargo.ID.Equals(CARGO_EMPLEADO);
-        }
 
-        private bool isRh()
-        {
-            return controlVista.Personal.Cargo.ID.Equals(CARGO_RH);
-        }
-
-        private bool isGerente()
-        {
-            return controlVista.Personal.Cargo.ID.Equals(CARGO_GERENTE);
-        }
 
         private void hideBtn()
         {
             btn_show_org.Enabled = false;
             btn_new_nesec.Enabled = false;
             btn_show_nesec.Enabled = false;
-            btn_new_find_resource.Enabled = false;
-            btn_show_find_resouce.Enabled = false;
             btn_regist_empl.Enabled = false;
             btn_show_empl.Enabled = false;
+            btn_show_find_resouce.Enabled = false;
 
         }
 
