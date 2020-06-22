@@ -24,7 +24,11 @@ namespace gestor_de_recursos_humanos
         private CrearBusqueda crearBusqueda;
         private VerPostulantes verPostulantes;
         private VerPropuestos verPropuestos;
+<<<<<<< HEAD
         internal BusquedaRecurso BusquedaRecurso;
+=======
+
+>>>>>>> refs/heads/master
 
         public ControlVista()
         {

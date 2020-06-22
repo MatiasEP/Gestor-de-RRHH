@@ -46,7 +46,11 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnVolver.Location = new System.Drawing.Point(665, 400);
+=======
+            this.btnVolver.Location = new System.Drawing.Point(646, 400);
+>>>>>>> refs/heads/master
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(100, 43);
             this.btnVolver.TabIndex = 7;
@@ -57,7 +61,11 @@
             // btnCrearBusqueda
             // 
             this.btnCrearBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnCrearBusqueda.Location = new System.Drawing.Point(459, 400);
+=======
+            this.btnCrearBusqueda.Location = new System.Drawing.Point(338, 400);
+>>>>>>> refs/heads/master
             this.btnCrearBusqueda.Name = "btnCrearBusqueda";
             this.btnCrearBusqueda.Size = new System.Drawing.Size(97, 43);
             this.btnCrearBusqueda.TabIndex = 6;
@@ -160,8 +168,13 @@
             // 
             // btnVerPropuestos
             // 
+<<<<<<< HEAD
             this.btnVerPropuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVerPropuestos.Location = new System.Drawing.Point(562, 400);
+=======
+            this.btnVerPropuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerPropuestos.Location = new System.Drawing.Point(484, 400);
+>>>>>>> refs/heads/master
             this.btnVerPropuestos.Name = "btnVerPropuestos";
             this.btnVerPropuestos.Size = new System.Drawing.Size(97, 43);
             this.btnVerPropuestos.TabIndex = 8;

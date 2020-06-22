@@ -28,6 +28,7 @@ namespace gestor_de_recursos_humanos
         {
             ControlVista.Organigrama = new Organigrama();
             ControlVista.Organigrama.ControlVista = ControlVista;
+            ControlVista.Organigrama.ID = ControlVista.Personal.ID;
             ControlVista.Menu.Hide();
             ControlVista.Organigrama.Show();
         }

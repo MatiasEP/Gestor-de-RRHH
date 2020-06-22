@@ -19,19 +19,33 @@ namespace gestor_de_recursos_humanos
         public int IdNecesidad { get => idNecesidad; set => idNecesidad = value; }
 
 
+        private int ID;
         public VerNecesidad()
         {
             InitializeComponent();
+            controlVista = new ControlVista();
+            controlVista.VerNecesidad = this;
         }
 
         private void VerNecesidad_Load(object sender, EventArgs e)
         {
             dgrVerNecesidad.DataSource = new Necesidad().VerTodoNecesidad();
+<<<<<<< HEAD
             dgrVerNecesidad.Columns["ID"].Visible = false;
 
 
 
 
+=======
+            if(ControlVista.Personal.Cargo.ID == 1)
+            {
+                btnCrearBusqueda.Hide();
+            }
+            if (ControlVista.Personal.Cargo.ID == 2)
+            {
+                btnVerPropuestos.Hide();
+            }
+>>>>>>> refs/heads/master
         }
 
         private void VerNecesidad_FormClosed(object sender, FormClosedEventArgs e)
@@ -51,6 +65,7 @@ namespace gestor_de_recursos_humanos
             txtAsunto.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Asunto"].Value.ToString();
             txtDescripcion.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Necesidad"].Value.ToString();
             lblCreador.Text = dgrVerNecesidad.Rows[e.RowIndex].Cells["Creador"].Value.ToString();
+<<<<<<< HEAD
 
         }
 
@@ -84,6 +99,38 @@ namespace gestor_de_recursos_humanos
             ControlVista.VerPropuestos.Show();
             ControlVista.VerNecesidad.Hide();
 
+=======
+            ID = Convert.ToInt32(dgrVerNecesidad.Rows[e.RowIndex].Cells["N°"].Value);
+        }
+
+        private void btnVerPropuestos_Click(object sender, EventArgs e)
+        {
+            ControlVista.VerPropuestos = new VerPropuestos();
+
+            ControlVista.CrearBusqueda.ControlVista = ControlVista;
+            ControlVista.VerPropuestos.necesidad = ID;
+
+            this.Hide();
+            ControlVista.VerPropuestos.Show();
+        }
+
+        private void btnCrearBusqueda_Click(object sender, EventArgs e)
+        {
+            ControlVista.CrearBusqueda = new CrearBusqueda();
+
+            ControlVista.CrearBusqueda.ControlVista = ControlVista;
+            ControlVista.CrearBusqueda.Necesidad = ID;
+            ControlVista.CrearBusqueda.creador = ControlVista.Personal.ID;
+
+            this.Hide();
+            ControlVista.CrearBusqueda.Show();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            ControlVista.showMenu();
+            this.Hide();
+>>>>>>> refs/heads/master
         }
     }
 }

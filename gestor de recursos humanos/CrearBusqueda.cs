@@ -64,7 +64,7 @@ namespace gestor_de_recursos_humanos
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Esta busqueda ya existe");
+                MessageBox.Show("La necesidad ya posee una busqueda asociada");
                 }
                 
             }
